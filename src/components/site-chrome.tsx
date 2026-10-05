@@ -3,6 +3,7 @@ import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { COMPANY, CATEGORIES } from "@/data/catalogue";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { Button } from "@/components/ui/button";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -20,6 +21,16 @@ export function SiteHeader() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const catRef = useRef<HTMLDivElement>(null);
+  const browseRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!cats) return;
+    const close = (e: MouseEvent) => {
+      if (browseRef.current && !browseRef.current.contains(e.target as Node)) setCats(false);
+    };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, [cats]);
 
   useEffect(() => {
     if (!catOpen) return;
@@ -162,15 +173,17 @@ export function SiteHeader() {
       <nav className="border-b border-border bg-brand text-brand-foreground">
         <div className="mx-auto hidden max-w-7xl items-center gap-1 px-4 md:flex">
           <div
+            ref={browseRef}
             onMouseEnter={() => setCats(true)}
             onMouseLeave={() => setCats(false)}
-            className="relative"
+            onKeyDown={(e) => { if (e.key === "Escape") setCats(false); }}
+            className="relative order-2"
           >
-            <button className="flex items-center gap-2 bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground">
-              <Menu className="h-4 w-4" /> Browse Categories
-            </button>
+            <Button variant="ghost" onClick={() => setCats((value) => !value)} aria-expanded={cats} aria-controls="navigation-categories" className="h-auto rounded-none px-4 py-3 text-brand-foreground hover:bg-accent hover:text-accent-foreground">
+              Categories <ChevronDown className="h-4 w-4" />
+            </Button>
             {cats && (
-              <div className="absolute left-0 top-full z-50 w-72 bg-background text-foreground shadow-xl">
+              <div id="navigation-categories" className="absolute left-0 top-full z-50 max-h-[65vh] w-72 overflow-auto bg-background text-foreground shadow-xl">
                 {CATEGORIES.map((c) => (
                   <Link
                     key={c.slug}
@@ -188,16 +201,16 @@ export function SiteHeader() {
             <Link
               key={n.to}
               to={n.to}
-              className="px-4 py-3 text-sm font-medium hover:text-accent"
-              activeProps={{ className: "px-4 py-3 text-sm font-medium text-accent" }}
+               className={`${n.to === "/services" || n.to === "/contact" ? "order-3" : "order-1"} px-4 py-3 text-sm font-medium hover:text-accent`}
+               activeProps={{ className: `${n.to === "/services" || n.to === "/contact" ? "order-3" : "order-1"} px-4 py-3 text-sm font-medium text-accent` }}
             >
               {n.label}
             </Link>
           ))}
           <Link
             to="/featured-products"
-            className="ml-2 flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-sm font-bold text-featured-foreground shadow-md transition hover:brightness-105"
-            activeProps={{ className: "ml-2 flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-sm font-bold text-featured-foreground shadow-md ring-2 ring-white/70" }}
+             className="order-4 ml-2 flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-sm font-bold text-featured-foreground shadow-md transition hover:brightness-105"
+             activeProps={{ className: "order-4 ml-2 flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-sm font-bold text-featured-foreground shadow-md ring-2 ring-featured-foreground/70" }}
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-80" />
@@ -214,6 +227,12 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
+            <Button variant="ghost" onClick={() => setCats((value) => !value)} aria-expanded={cats} className="h-auto w-full justify-between rounded-none border-b border-brand-foreground/10 px-4 py-3 text-brand-foreground">
+              Categories <ChevronDown className="h-4 w-4" />
+            </Button>
+            {cats && <div className="bg-background text-foreground">
+              {CATEGORIES.map((category) => <Link key={category.slug} to="/products/$slug" params={{ slug: category.slug }} onClick={() => { setOpen(false); setCats(false); }} className="block border-b border-border px-6 py-3 text-sm hover:bg-muted">{category.name}</Link>)}
+            </div>}
             <Link
               to="/featured-products"
               className="block border-b border-brand-foreground/10 bg-featured px-4 py-3 text-sm font-bold text-featured-foreground"
