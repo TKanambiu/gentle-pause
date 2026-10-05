@@ -12,4 +12,4 @@
 - [x] Add Categories beside the main navigation links, including mobile access.
 - [x] Sync changed website sections and actual partnership logos from the live website.
 - [x] Verify photos, navigation, sections, and page metadata.
-- [ ] Restore uploaded warehouse and partner photos and replace the footer with the supplied lower logo; verify all images load.
+- [x] Restore uploaded warehouse and partner photos and replace the footer with the supplied lower logo; verify all images load.
