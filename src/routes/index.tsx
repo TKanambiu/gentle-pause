@@ -4,6 +4,7 @@ import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { CATEGORIES, COMPANY } from "@/data/catalogue";
 import { useEffect, useRef, useState } from "react";
 import { CategoryMarquee } from "@/components/category-marquee";
+import { FeaturedMarquee } from "@/components/featured-marquee";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import warehouseAsset from "@/assets/site/warehouse.png.asset.json";
 import { PARTNER_LOGOS } from "@/data/partner-logos";
@@ -131,6 +132,59 @@ function HomePage() {
         </div>
       </section>
 
+      <FeaturedMarquee />
+
+      {/* Services */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand via-brand to-topbar" />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
+        <div className="relative mx-auto max-w-7xl px-4">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
+              <span className="h-px w-10 bg-accent" /> Our Services <span className="h-px w-10 bg-accent" />
+            </div>
+            <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-5xl">
+              Beyond supply — <span className="text-accent">end-to-end support</span>
+            </h2>
+            <p className="mt-4 text-brand-foreground/80">
+              From procurement to installation, training and maintenance — we stand behind every product we deliver.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { image: "/svc-installation.webp", title: "Equipment Installation", body: "Professional installation of hospital, laboratory and imaging equipment." },
+              { image: "/svc-maintenance.webp", title: "Maintenance & Repair", body: "Preventive maintenance contracts and rapid on-site repair services." },
+              { image: "/svc-training.webp", title: "Training & Commissioning", body: "Operator training and commissioning to get your team confident from day one." },
+              { image: "/svc-humanitarian.webp", title: "Humanitarian Supply", body: "Bulk supply to NGOs and government programs with reliable logistics." },
+              { image: "/svc-custom-sourcing.webp", title: "Custom Sourcing", body: "Can't find what you need? We source certified products globally on request." },
+              { image: "/svc-delivery.webp", title: "Regional Delivery", body: "Timely and secure delivery across Kenya and East Africa." },
+            ].map((s, idx) => (
+                <div
+                  key={s.title}
+                  className="group relative overflow-hidden rounded-2xl bg-white/[0.06] shadow-lg ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:ring-accent/60"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand via-brand/40 to-transparent" />
+                    <span className="absolute right-4 top-4 font-display text-3xl font-black text-white/30">
+                      0{idx + 1}
+                    </span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-lg font-bold text-white">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-brand-foreground/80">{s.body}</p>
+                  </div>
+                </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About — editorial, professional */}
       <section className="overflow-hidden border-y border-border bg-background py-16 lg:py-20">
         <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 lg:grid-cols-2">
@@ -180,57 +234,6 @@ function HomePage() {
             <Link to="/about" className="mt-10 inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-brand to-brand/80 px-6 py-3 text-sm font-semibold text-brand-foreground shadow-lg transition hover:brightness-110">
               Learn more about us →
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand via-brand to-topbar" />
-        <div className="pointer-events-none absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
-        <div className="relative mx-auto max-w-7xl px-4">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
-              <span className="h-px w-10 bg-accent" /> Our Services <span className="h-px w-10 bg-accent" />
-            </div>
-            <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-5xl">
-              Beyond supply — <span className="text-accent">end-to-end support</span>
-            </h2>
-            <p className="mt-4 text-brand-foreground/80">
-              From procurement to installation, training and maintenance — we stand behind every product we deliver.
-            </p>
-          </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { image: "/svc-installation.webp", title: "Equipment Installation", body: "Professional installation of hospital, laboratory and imaging equipment." },
-              { image: "/svc-maintenance.webp", title: "Maintenance & Repair", body: "Preventive maintenance contracts and rapid on-site repair services." },
-              { image: "/svc-training.webp", title: "Training & Commissioning", body: "Operator training and commissioning to get your team confident from day one." },
-              { image: "/svc-humanitarian.webp", title: "Humanitarian Supply", body: "Bulk supply to NGOs and government programs with reliable logistics." },
-              { image: "/svc-custom-sourcing.webp", title: "Custom Sourcing", body: "Can't find what you need? We source certified products globally on request." },
-              { image: "/svc-delivery.webp", title: "Regional Delivery", body: "Timely and secure delivery across Kenya and East Africa." },
-            ].map((s, idx) => (
-                <div
-                  key={s.title}
-                  className="group relative overflow-hidden rounded-2xl bg-white/[0.06] shadow-lg ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:ring-accent/60"
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <img
-                      src={s.image}
-                      alt={s.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand via-brand/40 to-transparent" />
-                    <span className="absolute right-4 top-4 font-display text-3xl font-black text-white/30">
-                      0{idx + 1}
-                    </span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-lg font-bold text-white">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-brand-foreground/80">{s.body}</p>
-                  </div>
-                </div>
-            ))}
           </div>
         </div>
       </section>
