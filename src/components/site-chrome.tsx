@@ -5,6 +5,7 @@ import { COMPANY, CATEGORIES } from "@/data/catalogue";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Button } from "@/components/ui/button";
 import logoAsset from "@/assets/site/logo-wide.png.asset.json";
+import lowerLogoAsset from "@/assets/site/lower-logo-clean.png.asset.json";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -277,7 +278,7 @@ export function SiteFooter() {
 
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_1.1fr_1fr] lg:gap-12 lg:px-8">
         <div className="min-w-0 sm:col-span-2 lg:col-span-1 lg:pr-8">
-          <img src={logoAsset.url} alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions" width={1000} height={296} loading="lazy" decoding="async" className="block h-auto w-full max-w-lg object-contain object-left" />
+          <img src={lowerLogoAsset.url} alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions" width={2169} height={725} loading="lazy" decoding="async" className="block h-auto w-full max-w-lg object-contain object-left" />
           <p className="mt-10 max-w-lg text-base leading-8 text-footer-muted">Medical supplies, clinical equipment and humanitarian healthcare solutions for hospitals, clinics, NGOs and institutions across Africa.</p>
           <div className="mt-9 flex items-center gap-4 border-t border-footer-border pt-6 font-mono text-xs text-footer-accent"><span className="h-2.5 w-2.5 shrink-0 rounded-full bg-footer-accent" />NAIROBI BASE / REGIONAL DELIVERY</div>
         </div>
