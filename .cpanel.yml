@@ -1,5 +1,7 @@
 ---
 deployment:
+  # Build outside the Starter shared-hosting account, then deploy dist/client.
+  # No Node process or application server is required on cPanel.
   tasks:
     - export DEPLOYPATH=/home/$USER/public_html/
     - /bin/mkdir -p "$DEPLOYPATH"
