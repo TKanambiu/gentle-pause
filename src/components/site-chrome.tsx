@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Menu, X, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Search, ChevronDown, Phone, Mail, MapPin } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { COMPANY, CATEGORIES } from "@/data/catalogue";
 import { WhatsAppButton } from "@/components/whatsapp-button";
@@ -22,6 +22,15 @@ export function SiteHeader() {
   const navigate = useNavigate();
   const catRef = useRef<HTMLDivElement>(null);
   const browseRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { setOpen(false); setCats(false); }
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
 
   useEffect(() => {
     if (!cats) return;
@@ -54,52 +63,47 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 bg-background">
-      {/* Contact strip — thicker, clickable, phone pulses */}
+      {/* Compact contact strip with no stacked rows on small screens. */}
       <div className="bg-topbar text-topbar-foreground">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 text-sm">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-4 py-1 text-xs md:flex md:justify-between md:gap-4 md:py-2 md:text-sm">
           <a
             href={`https://maps.google.com/?q=${encodeURIComponent(COMPANY.address)}`}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 font-medium hover:text-accent"
+            className="inline-flex min-w-0 items-center gap-2 font-medium hover:text-topbar-foreground/80"
           >
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-white/10 group-hover:bg-accent/20">
-              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            </span>
-            <span className="tracking-wide">{COMPANY.address}</span>
+            <MapPin className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate md:hidden">Nairobi, Kenya</span>
+            <span className="hidden md:inline">{COMPANY.address}</span>
           </a>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <a href={`mailto:${COMPANY.email}`} className="group inline-flex items-center gap-2 font-medium hover:text-accent">
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-white/10 group-hover:bg-accent/20">
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-              </span>
-              <span className="tracking-wide">{COMPANY.email}</span>
+          <div className="flex shrink-0 items-center gap-3 md:gap-6">
+            <a href={`mailto:${COMPANY.email}`} aria-label={`Email ${COMPANY.email}`} title={COMPANY.email} className="hidden items-center gap-2 font-medium hover:text-topbar-foreground/80 md:inline-flex">
+              <Mail className="h-4 w-4 shrink-0" />
+              <span>{COMPANY.email}</span>
             </a>
             <a
               href={`tel:${primaryPhoneHref}`}
-              className="relative inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 font-bold text-accent-foreground shadow-md ring-2 ring-accent/40 animate-pulse-ring"
+              className="inline-flex min-h-8 items-center gap-2 whitespace-nowrap font-semibold text-topbar-foreground hover:text-topbar-foreground/80"
             >
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-600" />
-              </span>
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
-              <span className="tracking-wide">{primaryPhone}</span>
+              <Phone className="h-3.5 w-3.5 shrink-0" />
+              <span>{primaryPhone}</span>
             </a>
           </div>
         </div>
       </div>
 
       <div className="border-b border-border">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-1.5 md:gap-6 md:py-2">
-          <Link to="/" className="flex h-16 shrink-0 items-center" aria-label="Zentramed Health home">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 md:flex md:justify-between md:gap-6">
+          <Link to="/" className="flex h-14 min-w-0 items-center md:h-16 md:shrink-0" aria-label="Zentramed Health home">
             <img
-              src="/logo-wide.png"
+              src="/logo-wide.png?v=zentramed"
               alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions"
               loading="eager"
               decoding="sync"
               fetchPriority="high"
-              className="h-full w-auto max-w-[15rem] object-contain sm:max-w-[18rem] lg:max-w-[22rem]"
+              width={1000}
+              height={296}
+              className="h-auto max-h-full w-full max-w-[16rem] object-contain md:w-auto md:max-w-[18rem] lg:max-w-[22rem]"
             />
           </Link>
           <form
@@ -164,9 +168,9 @@ export function SiteHeader() {
           <div className="hidden shrink-0 lg:block">
             <WhatsAppButton size="sm" badge={null} />
           </div>
-          <button className="md:hidden" onClick={() => setOpen((o) => !o)} aria-label="Toggle menu">
+          <Button variant="ghost" size="icon" className="h-11 w-11 shrink-0 text-brand-accent md:hidden" onClick={() => { setOpen((o) => !o); setCats(false); }} aria-label="Toggle menu" aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <X /> : <Menu />}
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -221,16 +225,16 @@ export function SiteHeader() {
         </div>
 
         {open && (
-          <div className="md:hidden">
+          <div id="mobile-navigation" className="max-h-[calc(100dvh-110px)] overflow-y-auto overscroll-contain md:hidden">
             {NAV.map((n) => (
-              <Link key={n.to} to={n.to} className="block border-b border-brand-foreground/10 px-4 py-3 text-sm" onClick={() => setOpen(false)}>
+              <Link key={n.to} to={n.to} className="block border-b border-brand-foreground/10 px-4 py-3 text-sm" activeProps={{ className: "bg-brand-accent font-semibold" }} onClick={() => setOpen(false)}>
                 {n.label}
               </Link>
             ))}
-            <Button variant="ghost" onClick={() => setCats((value) => !value)} aria-expanded={cats} className="h-auto w-full justify-between rounded-none border-b border-brand-foreground/10 px-4 py-3 text-brand-foreground">
+            <Button variant="ghost" onClick={() => setCats((value) => !value)} aria-expanded={cats} aria-controls="mobile-categories" className="h-auto w-full justify-between rounded-none border-b border-brand-foreground/10 px-4 py-3 text-brand-foreground">
               Categories <ChevronDown className="h-4 w-4" />
             </Button>
-            {cats && <div className="bg-background text-foreground">
+            {cats && <div id="mobile-categories" className="bg-background text-foreground">
               {CATEGORIES.map((category) => <Link key={category.slug} to="/products/$slug" params={{ slug: category.slug }} onClick={() => { setOpen(false); setCats(false); }} className="block border-b border-border px-6 py-3 text-sm hover:bg-muted">{category.name}</Link>)}
             </div>}
             <Link
@@ -242,6 +246,7 @@ export function SiteHeader() {
             </Link>
             <div className="p-3">
               <WhatsAppButton size="sm" badge={null} className="w-full justify-center" />
+              <a href={`mailto:${COMPANY.email}`} className="mt-2 flex min-h-11 items-center justify-center gap-2 text-sm text-brand-foreground"><Mail className="h-4 w-4 shrink-0" />{COMPANY.email}</a>
             </div>
           </div>
         )}
@@ -272,7 +277,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-12">
         <div className="md:col-span-4">
           <div className="flex w-full max-w-md items-center justify-center rounded-xl bg-white px-5 py-4 shadow-lg ring-1 ring-white/20">
-            <img src="/logo-wide.png" alt="Zentramed Health" loading="lazy" decoding="async" className="block h-auto w-full object-contain" />
+            <img src="/logo-wide.png?v=zentramed" alt="Zentramed Health" width={1000} height={296} loading="lazy" decoding="async" className="block h-auto w-full object-contain" />
           </div>
           <p className="mt-5 text-sm leading-relaxed text-topbar-foreground/75">
             Trusted supplier of medical supplies, equipment and healthcare solutions to hospitals,
