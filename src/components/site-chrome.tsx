@@ -67,7 +67,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 bg-background">
       {/* Compact contact strip with no stacked rows on small screens. */}
       <div className="bg-topbar text-topbar-foreground">
-        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-1 text-[11px] md:flex md:justify-between md:gap-4 md:px-4 md:py-2 md:text-sm">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-1 text-[11px] md:flex md:justify-between md:gap-4 md:px-4 md:py-1 md:text-xs">
           <a
             href={`https://maps.google.com/?q=${encodeURIComponent(COMPANY.address)}`}
             target="_blank"
@@ -75,11 +75,10 @@ export function SiteHeader() {
             className="inline-flex min-w-0 items-center gap-2 font-medium hover:text-topbar-foreground/80"
           >
             <MapPin className="h-3.5 w-3.5 shrink-0" />
-            <span className="truncate md:hidden">Nairobi, Kenya</span>
-            <span className="hidden md:inline">{COMPANY.address}</span>
+            <span className="truncate">Nairobi, Kenya</span>
           </a>
-          <div className="flex shrink-0 items-center gap-3 md:gap-6">
-            <a href={`mailto:${COMPANY.email}`} aria-label={`Email ${COMPANY.email}`} title={COMPANY.email} className="hidden items-center gap-2 font-medium hover:text-topbar-foreground/80 md:inline-flex">
+          <div className="flex shrink-0 items-center gap-3 md:gap-4">
+            <a href={`mailto:${COMPANY.email}`} aria-label={`Email ${COMPANY.email}`} title={COMPANY.email} className="hidden items-center gap-2 font-medium hover:text-topbar-foreground/80 xl:inline-flex">
               <Mail className="h-4 w-4 shrink-0" />
               <span>{COMPANY.email}</span>
             </a>
@@ -91,6 +90,13 @@ export function SiteHeader() {
               <span>{primaryPhone}</span>
             </a>
           </div>
+          <nav aria-label="Main navigation" className="hidden shrink-0 items-center md:flex">
+            {NAV.map((n) => (
+              <Link key={n.to} to={n.to} className="border-l border-topbar-foreground/20 px-3 py-2 font-medium transition hover:bg-topbar-foreground/10" activeProps={{ className: "bg-topbar-foreground/15 font-semibold" }} activeOptions={{ exact: n.to === "/" }}>
+                {n.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
 
@@ -176,52 +182,50 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <nav className="border-b border-border bg-brand text-brand-foreground">
-        <div className="mx-auto hidden max-w-7xl items-center gap-1 px-4 md:flex">
+      <nav aria-label="Product categories" className="border-b border-border bg-brand text-brand-foreground">
+        <div className="mx-auto hidden max-w-7xl flex-wrap items-center gap-1 px-4 md:flex">
+          {CATEGORIES.slice(0, 4).map((category) => (
+            <Link
+              key={category.slug}
+              to="/products/$slug"
+              params={{ slug: category.slug }}
+              className="border-r border-brand-foreground/25 px-3 py-3 text-xs font-semibold uppercase transition hover:bg-accent hover:text-accent-foreground lg:text-sm"
+              activeProps={{ className: "bg-accent text-accent-foreground" }}
+            >
+              {category.name}
+            </Link>
+          ))}
           <div
             ref={browseRef}
             onMouseEnter={() => setCats(true)}
             onMouseLeave={() => setCats(false)}
             onKeyDown={(e) => { if (e.key === "Escape") setCats(false); }}
-            className="relative order-2"
+            className="relative"
           >
-            <Button variant="ghost" onClick={() => setCats((value) => !value)} aria-expanded={cats} aria-controls="navigation-categories" className="h-auto rounded-none px-4 py-3 text-brand-foreground hover:bg-accent hover:text-accent-foreground">
-              Categories <ChevronDown className="h-4 w-4" />
+            <Button variant="ghost" onClick={() => setCats((value) => !value)} aria-expanded={cats} aria-controls="navigation-categories" className="h-auto rounded-none px-3 py-3 text-xs font-semibold uppercase text-brand-foreground hover:bg-accent hover:text-accent-foreground lg:text-sm">
+              Other Categories <ChevronDown className="h-4 w-4" />
             </Button>
             {cats && (
-              <div id="navigation-categories" className="absolute left-0 top-full z-50 max-h-[65vh] w-72 overflow-auto bg-background text-foreground shadow-xl">
-                {CATEGORIES.map((c) => (
+              <div id="navigation-categories" className="absolute right-0 top-full z-50 max-h-[65vh] w-72 overflow-auto bg-background text-foreground shadow-xl">
+                {CATEGORIES.slice(4).map((category) => (
                   <Link
-                    key={c.slug}
+                    key={category.slug}
                     to="/products/$slug"
-                    params={{ slug: c.slug }}
+                    params={{ slug: category.slug }}
+                    onClick={() => setCats(false)}
                     className="block border-b border-border px-4 py-2.5 text-sm hover:bg-muted hover:text-brand"
                   >
-                    {c.name}
+                    {category.name}
                   </Link>
                 ))}
               </div>
             )}
           </div>
-          {NAV.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-               className={`${n.to === "/services" || n.to === "/contact" ? "order-3" : "order-1"} px-4 py-3 text-sm font-medium hover:text-accent`}
-               activeProps={{ className: `${n.to === "/services" || n.to === "/contact" ? "order-3" : "order-1"} px-4 py-3 text-sm font-medium text-accent` }}
-            >
-              {n.label}
-            </Link>
-          ))}
           <Link
             to="/featured-products"
-             className="order-4 ml-2 flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-sm font-bold text-featured-foreground shadow-md transition hover:brightness-105"
-             activeProps={{ className: "order-4 ml-2 flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-sm font-bold text-featured-foreground shadow-md ring-2 ring-featured-foreground/70" }}
+            className="my-1 ml-auto flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-xs font-bold text-featured-foreground transition hover:brightness-105 lg:text-sm"
+            activeProps={{ className: "ring-2 ring-featured-foreground/70" }}
           >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-80" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
-            </span>
             Featured Products
           </Link>
         </div>
