@@ -7,6 +7,13 @@
 @theme inline {
   --container-7xl: 100%;
   --container-6xl: 100%;
+  --color-admin-background: var(--admin-background);
+  --color-admin-surface: var(--admin-surface);
+  --color-admin-border: var(--admin-border);
+  --color-admin-foreground: var(--admin-foreground);
+  --color-admin-muted: var(--admin-muted);
+  --color-admin-accent: var(--admin-accent);
+  --color-admin-success: var(--admin-success);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -44,6 +51,14 @@
 }
 
 :root {
+  --admin-background: oklch(0.13 0.015 230);
+  --admin-surface: oklch(0.17 0.017 230);
+  --admin-border: oklch(0.26 0.019 230);
+  --admin-foreground: oklch(0.97 0.009 230);
+  --admin-muted: oklch(0.60 0.025 230);
+  --admin-accent: oklch(0.79 0.14 200);
+  --admin-success: oklch(0.75 0.16 165);
+  --shadow-admin: 0 20px 50px oklch(0.08 0.01 230 / 0.5);
   --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.2 0.02 200);
