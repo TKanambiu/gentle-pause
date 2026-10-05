@@ -5,66 +5,11 @@ import { CATEGORIES, COMPANY } from "@/data/catalogue";
 import { useEffect, useRef, useState } from "react";
 import { CategoryMarquee } from "@/components/category-marquee";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { HERO_SLIDES } from "@/data/hero-slides";
+import { Button } from "@/components/ui/button";
 
 
-const SLIDES = [
-  {
-    img: "/hero1.webp",
-    eyebrow: "Molecular Diagnostics",
-    title: "Yuanzan VQ-200",
-    accent: "qPCR System.",
-    body: "True diagnostic freedom — a high-precision, 96-well real-time PCR system that is completely open and affordable.",
-    bullets: [
-      "Consumable freedom: works with any brand of tubes, strips and plates",
-      "Built-in 9\" touchscreen with embedded computer — no external PC",
-      "Elite thermal uniformity ≤ ± 0.15°C, beating industry standards",
-      "Motorized lid & auto-loading chamber — ready for robotic integration",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the Yuanzan VQ-200 qPCR System.",
-  },
-  {
-    img: "/hero2.webp",
-    eyebrow: "Ophthalmic Solutions",
-    title: "Ophthalmic Refraction",
-    accent: "Unit — Eye Exam Workshop.",
-    body: "Complete ophthalmic refraction workstations for hospitals, clinics and optical centres — accurate, ergonomic and clinic-ready.",
-    bullets: [
-      "Integrated chair, stand and instrument arms for full eye exams",
-      "Precision refraction, tonometry and slit-lamp mounting",
-      "Smooth motorised height and positioning controls",
-      "Installation, calibration and operator training included",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the Ophthalmic Refraction Unit.",
-  },
-  {
-    img: "/hero3.webp",
-    eyebrow: "Rapid Diagnostics",
-    title: "HIV Rapid",
-    accent: "Test Kit.",
-    body: "Laboratory-grade accuracy right at the point of care — rapid, reliable and equipment-free screening.",
-    bullets: [
-      "100% accuracy — certified sensitivity and specificity",
-      "Ultra-fast results in 15–25 minutes",
-      "Micro sample: only 40µl whole blood, serum or plasma",
-      "WHO PQ & CE IVDR compliant · stable 24 months at 4–30°C",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the HIV Rapid Test Kits.",
-  },
-  {
-    img: "/hero4.webp",
-    eyebrow: "Renal Care",
-    title: "Wesley W-T6008S",
-    accent: "Hemodialysis Machine.",
-    body: "Advanced blood purification for acute and chronic renal failure — intelligent automation with rigorous real-time monitoring.",
-    bullets: [
-      "All-in-one therapy: HD, on-line HDF and isolated ultrafiltration",
-      "Closed volume balance chamber for hyper-accurate fluid control",
-      "15\" touchscreen with guided visual and audible alarms",
-      "30-minute backup battery keeps the blood pump running on power loss",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the Wesley W-T6008S Hemodialysis Machine.",
-  },
-];
+const SLIDES = HERO_SLIDES;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -73,6 +18,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Zentramed Health is a trusted Nairobi-based supplier of medical supplies, hospital equipment, laboratory diagnostics and humanitarian healthcare solutions across Africa." },
       { property: "og:title", content: "Zentramed Health | Medical Equipment Supplier in Nairobi" },
       { property: "og:description", content: "Quality medical supplies, hospital equipment and healthcare solutions across Africa." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HomePage,
@@ -99,15 +46,15 @@ function HomePage() {
             <div key={idx} className="relative h-full shrink-0 bg-brand" style={{ width: `${100 / SLIDES.length}%` }}>
               <img
                 src={s.img}
-                alt=""
-                loading="eager"
+                alt={`${s.eyebrow} — ${s.title} ${s.accent}`}
+                loading={idx === 0 ? "eager" : "lazy"}
                 decoding="async"
                 fetchPriority={idx === 0 ? "high" : "low"}
                 className="absolute inset-0 h-full w-full object-contain md:object-cover object-center"
               />
               <div className="pointer-events-none absolute inset-y-0 left-0 w-full md:w-2/3" style={{ background: "var(--gradient-hero)" }} />
               <div className="absolute inset-0 mx-auto flex h-full max-w-7xl items-center px-4">
-                <div className="max-w-2xl text-white">
+                <div className="max-w-xl text-brand-foreground">
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-foreground shadow-lg">
                     {s.eyebrow}
                   </div>
@@ -115,15 +62,7 @@ function HomePage() {
                     {s.title}{" "}
                     <span className="text-accent">{s.accent}</span>
                   </h1>
-                  <p className="mt-3 max-w-xl text-sm text-white/95 drop-shadow md:text-base">{s.body}</p>
-                  <ul className="mt-4 space-y-1.5 text-sm text-white/95 md:text-[15px]">
-                    {s.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 drop-shadow">
-                        <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-3 max-w-lg text-sm text-brand-foreground drop-shadow md:text-base">{s.body}</p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     <WhatsAppButton text={s.waText} />
                     <Link to="/contact" className="rounded-md border-2 border-white/80 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm hover:bg-white/20">
@@ -137,10 +76,12 @@ function HomePage() {
         </div>
         <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
           {SLIDES.map((_, idx) => (
-            <button
+            <Button
+              variant="ghost"
               key={idx}
               onClick={() => setI(idx)}
-              className={`h-2 rounded-full transition-all ${idx === i ? "w-10 bg-accent" : "w-2 bg-white/60 hover:bg-white/90"}`}
+              className={`h-3 min-w-0 rounded-full p-0 transition-all ${idx === i ? "w-10 bg-brand-foreground" : "w-3 bg-brand-foreground/50 hover:bg-brand-foreground/90"}`}
+              aria-pressed={idx === i}
               aria-label={`Slide ${idx + 1}`}
             />
           ))}

@@ -11,6 +11,8 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Learn about Zentramed Health — a trusted African supplier of medical equipment, laboratory diagnostics and humanitarian healthcare solutions." },
       { property: "og:title", content: "About Zentramed Health" },
       { property: "og:description", content: "Trusted supplier of medical supplies and equipment across Africa." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: AboutPage,
