@@ -4,6 +4,7 @@ import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { PageHero } from "./about";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { COMPANY } from "@/data/catalogue";
+import { useState } from "react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -29,6 +30,7 @@ const SERVICES = [
 ];
 
 function ServicesPage() {
+  const [paused, setPaused] = useState(false);
   return (
     <div>
       <SiteHeader />
@@ -73,7 +75,7 @@ function ServicesPage() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-gradient-to-r from-brand to-topbar px-8 py-8 text-white shadow-xl">
+        <div className="mx-auto mt-16 flex max-w-7xl flex-wrap items-center justify-between gap-6 rounded-2xl bg-gradient-to-r from-brand to-topbar px-8 py-8 text-white shadow-xl">
           <div>
             <h3 className="font-display text-2xl font-bold">Need a tailored service package?</h3>
             <p className="mt-1 text-sm text-white/80">Talk to our specialists — we respond within one business day.</p>
