@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { CategoryMarquee } from "@/components/category-marquee";
 import { FeaturedMarquee } from "@/components/featured-marquee";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import warehouseAsset from "@/assets/site/wrhs.png.asset.json";
+const WAREHOUSE_IMAGE = "/wrhs.png";
 import { PARTNER_LOGOS } from "@/data/partner-logos";
 import { HERO_SLIDES } from "@/data/hero-slides";
 import { Button } from "@/components/ui/button";

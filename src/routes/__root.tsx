@@ -13,7 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { HERO_SLIDES } from "@/data/hero-slides";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import logoAsset from "@/assets/site/zentramed-logo.png.asset.json";
+const LOGO_PRELOAD_URL = "/logo-wide.png";
 
 function NotFoundComponent() {
   return (

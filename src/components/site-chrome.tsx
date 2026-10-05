@@ -5,7 +5,7 @@ import { COMPANY, CATEGORIES } from "@/data/catalogue";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Button } from "@/components/ui/button";
 const LOGO_URL = "/logo-wide.png";
-import lowerLogoAsset from "@/assets/site/lower-logo-clean.png.asset.json";
+const LOWER_LOGO_URL = "/logo-wide.png";
 
 const NAV = [
   { to: "/", label: "Home" },
