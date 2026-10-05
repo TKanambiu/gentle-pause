@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
-      { rel: "preload", as: "image", href: logoAsset.url, fetchPriority: "high" },
+      { rel: "preload", as: "image", href: LOGO_PRELOAD_URL, fetchPriority: "high" },
       { rel: "preload", as: "image", href: HERO_SLIDES[0]?.img, fetchPriority: "high" },
     ],
   }),

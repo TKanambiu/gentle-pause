@@ -198,7 +198,7 @@ function HomePage() {
           <div className="relative">
             <div className="absolute -left-4 -top-4 hidden h-full w-full border border-brand/30 md:block" />
             <img
-              src={warehouseAsset.url}
+              src={WAREHOUSE_IMAGE}
               alt="Zentramed medical-grade storage and distribution facility"
               className="relative aspect-[5/4] w-full object-cover shadow-xl"
               loading="lazy"
