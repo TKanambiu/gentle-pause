@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { COMPANY, CATEGORIES } from "@/data/catalogue";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/site/logo-wide.png.asset.json";
+const LOGO_URL = "/logo-wide.png";
 import lowerLogoAsset from "@/assets/site/lower-logo-clean.png.asset.json";
 
 const NAV = [

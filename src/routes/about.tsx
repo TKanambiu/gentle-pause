@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
-import aboutAsset from "@/assets/site/about-clinical.jpg.asset.json";
+const ABOUT_IMAGE = "/medical-grade-storage-facility.webp";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, HeartPulse, Truck, Globe, ArrowRight } from "lucide-react";
 
