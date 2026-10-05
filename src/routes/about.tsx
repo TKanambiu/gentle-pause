@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
-import aboutImg from "@/assets/about.jpg";
-import { CheckCircle2 } from "lucide-react";
+import aboutAsset from "@/assets/site/about.jpg.asset.json";
+import { Button } from "@/components/ui/button";
+import { ShieldCheck, HeartPulse, Truck, Globe, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -19,63 +20,63 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
+  const standards = [
+    { icon: ShieldCheck, title: "Quality assured", body: "Certified, approved products sourced from trusted global manufacturers." },
+    { icon: HeartPulse, title: "Clinically focused", body: "Solutions selected around the practical needs of care teams and facilities." },
+    { icon: Truck, title: "Dependable delivery", body: "Secure, coordinated fulfilment for institutions and programmes across the region." },
+    { icon: Globe, title: "Regional reach", body: "Local expertise in Nairobi with the capability to support partners across Africa." },
+  ];
   return (
     <div>
       <SiteHeader />
-      <PageHero title="About Zentramed Health" subtitle="Advancing Healthcare and Humanitarian Solutions" />
-      <section className="mx-auto max-w-7xl px-4 py-16">
-        <div className="grid items-start gap-12 md:grid-cols-2">
-          <img src={aboutImg} alt="Healthcare professional" className="rounded-xl shadow-lg" loading="lazy" />
-          <div>
-            <h2 className="font-display text-3xl font-bold text-brand">Who we are</h2>
-            <p className="mt-4 text-muted-foreground">
-              Zentramed Health is a trusted supplier of high-quality medical supplies, equipment and
-              solutions to hospitals, clinics, NGOs, government institutions and humanitarian
-              organizations across Africa. From wound care to imaging, oxygen therapy to hospital
-              furniture — we deliver the full spectrum of what healthcare facilities need to run.
-            </p>
-            <h3 className="mt-8 font-display text-xl font-semibold text-brand">Our mission</h3>
-            <p className="mt-2 text-muted-foreground">
-              To improve health outcomes by delivering quality, innovation and exceptional service to
-              every institution we serve.
-            </p>
-            <div className="mt-8 grid gap-3">
-              {[
-                "Quality Assured — certified and approved products only",
-                "Wide Range — comprehensive selection for every healthcare need",
-                "Reliable Delivery — timely and secure across the region",
-                "Customer Focus — dedicated support before and after sales",
-                "Competitive Prices — enterprise pricing for institutions and NGOs",
-              ].map((v) => (
-                <div key={v} className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                  <span className="text-sm">{v}</span>
-                </div>
-              ))}
-            </div>
-            <Link to="/contact" className="mt-8 inline-block rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground">
-              Get in touch
-            </Link>
+      <section className="bg-topbar text-topbar-foreground">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 lg:grid-cols-12 lg:py-16">
+          <div className="lg:col-span-8">
+            <p className="font-mono text-[10px] font-bold uppercase">About Zentramed Health</p>
+            <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl">Better healthcare begins with dependable supply.</h1>
+            <p className="mt-5 max-w-2xl border-l-2 border-brand pl-5 text-sm leading-7 text-topbar-foreground/70 sm:text-base">We connect hospitals, clinics, NGOs and public institutions with the medical products, equipment and support they need to deliver care with confidence.</p>
+          </div>
+          <div className="border-y border-brand/40 py-5 lg:col-span-3 lg:col-start-10">
+            <p className="font-mono text-[10px] uppercase">Our purpose</p>
+            <p className="mt-3 font-display text-lg font-semibold leading-snug">Advancing healthcare and humanitarian solutions across Africa.</p>
           </div>
         </div>
       </section>
-
-      <section className="bg-muted/40 py-16">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-3">
-          {[
-            { k: "9", l: "Product categories" },
-            { k: "500+", l: "Products stocked" },
-            { k: "Africa-wide", l: "Delivery reach" },
-          ].map((s) => (
-            <div key={s.l} className="rounded-xl bg-background p-8 text-center shadow-sm">
-              <div className="font-display text-4xl font-bold text-brand">{s.k}</div>
-              <div className="mt-2 text-sm text-muted-foreground">{s.l}</div>
+      <section className="py-16 lg:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16">
+          <div className="relative">
+            <img src={aboutAsset.url} alt="Healthcare professional preparing clinical instruments" className="aspect-[4/3] w-full object-cover shadow-xl" loading="lazy" />
+            <div className="absolute bottom-0 right-0 max-w-52 bg-brand px-6 py-5 text-brand-foreground shadow-xl">
+              <p className="font-display text-3xl font-bold">500+</p><p className="mt-1 text-xs font-semibold uppercase">Products stocked</p>
             </div>
-          ))}
+          </div>
+          <div>
+            <p className="font-mono text-[10px] font-bold uppercase text-brand">Who we are / What we stand for</p>
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">A committed partner to every care environment.</h2>
+            <p className="mt-5 text-base leading-7 text-muted-foreground">Zentramed Health is a trusted supplier of high-quality medical supplies, equipment and solutions. From wound care and diagnostics to oxygen therapy and hospital furniture, we deliver the breadth healthcare facilities need to operate effectively.</p>
+            <div className="mt-6 border-y border-border py-5">
+              <p className="font-mono text-[10px] font-bold uppercase text-brand">Our mission</p>
+              <p className="mt-3 font-display text-xl font-semibold leading-relaxed text-foreground">To improve health outcomes through quality, innovation and exceptional service.</p>
+            </div>
+            <Button asChild className="mt-6" size="lg"><Link to="/contact">Speak with our team <ArrowRight /></Link></Button>
+          </div>
         </div>
       </section>
-      <SiteFooter />
-      <WhatsAppFloat />
+      <section className="border-y border-border bg-muted/40 py-14">
+        <div className="mx-auto max-w-7xl px-5">
+          <div className="grid gap-5 border-b border-border pb-7 md:grid-cols-2 md:items-end">
+            <div><p className="font-mono text-[10px] font-bold uppercase text-brand">The Zentramed standard</p><h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Built around trust.</h2></div>
+            <p className="text-base leading-7 text-muted-foreground">Every engagement is guided by product integrity, responsive service and a clear understanding of institutional healthcare needs.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4">
+            {standards.map(({ icon: Icon, title, body }, index) => <article key={title} className="border-b border-border py-6 md:px-7 lg:border-b-0 lg:border-r lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0">
+              <div className="flex items-center justify-between"><Icon className="h-7 w-7 text-brand" strokeWidth={1.6} /><span className="font-mono text-[10px] text-muted-foreground">0{index + 1}</span></div>
+              <h3 className="mt-5 font-display text-lg font-bold text-foreground">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{body}</p>
+            </article>)}
+          </div>
+        </div>
+      </section>
+      <SiteFooter /><WhatsAppFloat />
     </div>
   );
 }
