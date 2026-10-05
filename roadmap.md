@@ -1,7 +1,8 @@
 # Website updates
-- [ ] Match the logo used in the lower section of the live About page.
-- [ ] Improve the About section design after visual direction selection.
+- [x] Match the logo used in the lower section of the live About page.
+- [x] Improve the About section design.
 - [ ] Improve the Android header and verify its appearance and navigation.
+- [x] Restore hero and About photos and show each full hero composition without vertical cropping.
 - [x] Widen site content to remove large side margins.
 - [x] Add moving featured products before Services and move About after Services.
 - [x] Restore /admin with a login matching the live site and compatible with static hosting; signed-in screen links to the existing live operations editor.

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { COMPANY, CATEGORIES } from "@/data/catalogue";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/site/zentramed-logo.png.asset.json";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -65,7 +66,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 bg-background">
       {/* Compact contact strip with no stacked rows on small screens. */}
       <div className="bg-topbar text-topbar-foreground">
-        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-4 py-1 text-xs md:flex md:justify-between md:gap-4 md:py-2 md:text-sm">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-1 text-[11px] md:flex md:justify-between md:gap-4 md:px-4 md:py-2 md:text-sm">
           <a
             href={`https://maps.google.com/?q=${encodeURIComponent(COMPANY.address)}`}
             target="_blank"
@@ -83,7 +84,7 @@ export function SiteHeader() {
             </a>
             <a
               href={`tel:${primaryPhoneHref}`}
-              className="inline-flex min-h-8 items-center gap-2 whitespace-nowrap font-semibold text-topbar-foreground hover:text-topbar-foreground/80"
+              className="inline-flex min-h-7 items-center gap-1.5 whitespace-nowrap font-semibold text-topbar-foreground hover:text-topbar-foreground/80 md:min-h-8 md:gap-2"
             >
               <Phone className="h-3.5 w-3.5 shrink-0" />
               <span>{primaryPhone}</span>
@@ -93,17 +94,17 @@ export function SiteHeader() {
       </div>
 
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 md:flex md:justify-between md:gap-6">
-          <Link to="/" className="flex h-14 min-w-0 items-center md:h-16 md:shrink-0" aria-label="Zentramed Health home">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-1.5 md:flex md:justify-between md:gap-6 md:px-4 md:py-2">
+          <Link to="/" className="flex h-12 min-w-0 items-center md:h-16 md:shrink-0" aria-label="Zentramed Health home">
             <img
-              src="/logo-wide.png?v=zentramed"
+              src={logoAsset.url}
               alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions"
               loading="eager"
               decoding="sync"
               fetchPriority="high"
-              width={1000}
-              height={296}
-              className="h-auto max-h-full w-full max-w-[16rem] object-contain md:w-auto md:max-w-[18rem] lg:max-w-[22rem]"
+              width={1516}
+              height={433}
+              className="h-auto max-h-11 w-full max-w-[14rem] object-contain object-left md:max-h-full md:w-auto md:max-w-[18rem] lg:max-w-[22rem]"
             />
           </Link>
           <form
@@ -168,7 +169,7 @@ export function SiteHeader() {
           <div className="hidden shrink-0 lg:block">
             <WhatsAppButton size="sm" badge={null} />
           </div>
-          <Button variant="ghost" size="icon" className="h-11 w-11 shrink-0 text-brand-accent md:hidden" onClick={() => { setOpen((o) => !o); setCats(false); }} aria-label="Toggle menu" aria-expanded={open} aria-controls="mobile-navigation">
+          <Button variant="ghost" size="icon" className="h-10 w-10 shrink-0 text-brand-accent md:hidden" onClick={() => { setOpen((o) => !o); setCats(false); }} aria-label="Toggle menu" aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <X /> : <Menu />}
           </Button>
         </div>
@@ -277,7 +278,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-12">
         <div className="md:col-span-4">
           <div className="flex w-full max-w-md items-center justify-center rounded-xl bg-white px-5 py-4 shadow-lg ring-1 ring-white/20">
-            <img src="/logo-wide.png?v=zentramed" alt="Zentramed Health" width={1000} height={296} loading="lazy" decoding="async" className="block h-auto w-full object-contain" />
+            <img src={logoAsset.url} alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions" width={1516} height={433} loading="lazy" decoding="async" className="block h-auto w-full object-contain" />
           </div>
           <p className="mt-5 text-sm leading-relaxed text-topbar-foreground/75">
             Trusted supplier of medical supplies, equipment and healthcare solutions to hospitals,

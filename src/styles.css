@@ -97,7 +97,12 @@
   --featured-soft: oklch(0.97 0.03 75);
 
   --gradient-hero: linear-gradient(90deg, oklch(0.28 0.058 250 / 0.82) 0%, oklch(0.32 0.07 220 / 0.5) 40%, oklch(0.52 0.093 195 / 0.18) 70%, transparent 100%);
+  --hero-mobile: linear-gradient(180deg, oklch(0.28 0.058 250 / 0.08) 0%, oklch(0.28 0.058 250 / 0.88) 54%, oklch(0.28 0.058 250 / 0.98) 100%);
   --shadow-card: 0 8px 28px -12px oklch(0.40 0.08 205 / 0.38);
+}
+
+@utility bg-hero-mobile {
+  background: var(--hero-mobile);
 }
 
 @layer base {
