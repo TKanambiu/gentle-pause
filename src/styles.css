@@ -138,6 +138,7 @@
 .animate-partner-marquee { animation: partner-marquee 80s linear infinite; }
 @keyframes featured-scroll { from { transform: translateX(0); } to { transform: translateX(-25%); } }
 .featured-track { animation: featured-scroll 32s linear infinite; }
+.featured-track-paused { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
   .animate-partner-marquee, .animate-cat-marquee, .featured-track { animation: none; }
   .featured-track { max-width: 100%; overflow-x: auto; }

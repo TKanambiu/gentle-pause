@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import dialysis from "@/assets/heroes/dialysis.webp.asset.json";
 
@@ -10,6 +11,7 @@ const FEATURED = [
 ];
 
 export function FeaturedMarquee() {
+  const [paused, setPaused] = useState(false);
   return (
     <section aria-labelledby="featured-heading" className="overflow-hidden border-y border-border bg-featured-soft py-14">
       <div className="mx-auto max-w-7xl px-4">
@@ -20,8 +22,8 @@ export function FeaturedMarquee() {
           </div>
           <Link to="/featured-products" className="inline-flex items-center gap-2 text-sm font-semibold text-brand">View featured products <ArrowUpRight className="h-4 w-4" /></Link>
         </div>
-        <div className="group mt-10 overflow-hidden" role="region" aria-label="Featured product carousel">
-          <div className="featured-track flex w-max gap-6 py-2 group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]">
+        <div className="group mt-10 overflow-hidden" role="region" aria-label="Featured product carousel" onPointerEnter={() => setPaused(true)} onPointerLeave={() => setPaused(false)} onFocusCapture={() => setPaused(true)} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }}>
+          <div className={`featured-track flex w-max gap-6 py-2 ${paused ? "featured-track-paused" : ""}`}>
             {[0, 1, 2, 3].flatMap((copy) => FEATURED.map((product) => (
               <Link key={`${copy}-${product.hash}`} to="/featured-products" hash={product.hash} tabIndex={copy === 0 ? 0 : -1} aria-hidden={copy !== 0 ? true : undefined} className="group/product block w-[280px] shrink-0 overflow-hidden rounded-lg border border-border bg-background shadow-sm md:w-[320px]">
                 <div className="aspect-[4/3] overflow-hidden bg-background"><img src={product.image} alt={product.name} loading="lazy" className="h-full w-full object-contain transition-transform duration-500 group-hover/product:scale-105" /></div>
