@@ -33,36 +33,44 @@ function ServicesPage() {
     <div>
       <SiteHeader />
       <PageHero title="Our Services" subtitle="End-to-end support for every healthcare facility we serve" />
-      <section className="mx-auto max-w-7xl px-4 py-16">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s, idx) => (
-            <div
-              key={s.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition hover:-translate-y-1.5 hover:shadow-xl"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-brand/20 to-transparent" />
-                <span className="absolute right-4 top-4 font-display text-3xl font-black text-white/40">
-                  0{idx + 1}
-                </span>
-                <div className="absolute bottom-4 left-4">
-                  <span className="rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-accent-foreground shadow">
-                    Service
-                  </span>
+      <section className="py-16">
+        <div
+          className="group overflow-hidden"
+          role="region"
+          aria-label="Our services"
+          onPointerEnter={() => setPaused(true)}
+          onPointerLeave={() => setPaused(false)}
+          onFocusCapture={() => setPaused(true)}
+          onBlurCapture={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setPaused(false); }}
+        >
+          <div className={`svc-track flex w-max gap-6 px-4 py-2 ${paused ? "svc-track-paused" : ""}`}>
+            {[0, 1].flatMap((copy) =>
+              SERVICES.map((s, idx) => (
+                <div
+                  key={`${copy}-${s.title}`}
+                  aria-hidden={copy !== 0 ? true : undefined}
+                  className="group/card relative w-[300px] shrink-0 overflow-hidden rounded-2xl border border-border bg-background shadow-sm md:w-[340px]"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={s.image}
+                      alt={copy === 0 ? s.title : ""}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover/card:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-brand/20 to-transparent" />
+                    <span className="absolute right-4 top-4 font-display text-3xl font-black text-white/40">
+                      0{idx + 1}
+                    </span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-lg font-semibold text-brand">{s.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-display text-lg font-semibold text-brand">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
-              </div>
-            </div>
-          ))}
+              )),
+            )}
+          </div>
         </div>
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-gradient-to-r from-brand to-topbar px-8 py-8 text-white shadow-xl">
