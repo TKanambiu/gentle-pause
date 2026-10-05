@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { COMPANY, CATEGORIES } from "@/data/catalogue";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/site/zentramed-logo.png.asset.json";
-import lowerLogoAsset from "@/assets/site/lower-logo.png.asset.json";
+import logoAsset from "@/assets/site/logo-wide.png.asset.json";
+import lowerLogoAsset from "@/assets/site/lower-logo-clean.png.asset.json";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -103,8 +103,8 @@ export function SiteHeader() {
               loading="eager"
               decoding="sync"
               fetchPriority="high"
-              width={1516}
-              height={433}
+              width={1000}
+              height={296}
               className="h-auto max-h-11 w-full max-w-[14rem] object-contain object-left md:max-h-full md:w-auto md:max-w-[18rem] lg:max-w-[22rem]"
             />
           </Link>
@@ -259,7 +259,7 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 bg-topbar text-topbar-foreground">
+    <footer className="mt-24 bg-footer text-footer-foreground">
       {/* Newsletter / CTA band */}
       <div className="border-b border-white/10 bg-gradient-to-r from-brand to-topbar">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-4 py-8">
@@ -276,75 +276,40 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-12">
-        <div className="md:col-span-4">
-          <div className="flex w-full max-w-md items-center justify-center rounded-xl bg-white px-5 py-4 shadow-lg ring-1 ring-white/20">
-            <img src={lowerLogoAsset.url} alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions" width={2169} height={725} loading="lazy" decoding="async" className="block h-auto w-full object-contain" />
-          </div>
-          <p className="mt-5 text-sm leading-relaxed text-topbar-foreground/75">
-            Trusted supplier of medical supplies, equipment and healthcare solutions to hospitals,
-            clinics, NGOs and humanitarian organizations across Africa.
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">ISO-aligned</span>
-            <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">Certified brands</span>
-            <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">Pan-African delivery</span>
-          </div>
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_1.1fr_1fr] lg:gap-12 lg:px-8">
+        <div className="min-w-0 sm:col-span-2 lg:col-span-1 lg:pr-8">
+          <img src={lowerLogoAsset.url} alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions" width={2169} height={725} loading="lazy" decoding="async" className="block h-auto w-full max-w-lg object-contain object-left" />
+          <p className="mt-10 max-w-lg text-base leading-8 text-footer-muted">Medical supplies, clinical equipment and humanitarian healthcare solutions for hospitals, clinics, NGOs and institutions across Africa.</p>
+          <div className="mt-9 flex items-center gap-4 border-t border-footer-border pt-6 font-mono text-xs text-footer-accent"><span className="h-2.5 w-2.5 shrink-0 rounded-full bg-footer-accent" />NAIROBI BASE / REGIONAL DELIVERY</div>
         </div>
-
-        <div className="md:col-span-2">
-          <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">Company</h4>
-          <ul className="mt-5 space-y-2.5 text-sm text-topbar-foreground/75">
-            {NAV.map((n) => (
-              <li key={n.to}><Link to={n.to} className="transition hover:text-accent">{n.label}</Link></li>
-            ))}
+        <div className="min-w-0">
+          <h4 className="text-sm font-bold uppercase text-footer-foreground">Company</h4>
+          <ul className="mt-7 text-base text-footer-muted">
+            {NAV.map((n, index) => <li key={n.to} className="border-b border-footer-border last:border-b-0"><Link to={n.to} className="flex items-center gap-4 py-4 transition hover:text-footer-accent"><span className="font-mono text-xs text-footer-accent">{String(index + 1).padStart(2, "0")}</span>{n.label}</Link></li>)}
           </ul>
         </div>
-
-        <div className="md:col-span-3">
-          <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">Top Categories</h4>
-          <ul className="mt-5 space-y-2.5 text-sm text-topbar-foreground/75">
-            {CATEGORIES.slice(0, 5).map((c) => (
-              <li key={c.slug}>
-                <Link to="/products/$slug" params={{ slug: c.slug }} className="transition hover:text-accent">{c.name}</Link>
-              </li>
-            ))}
+        <div className="min-w-0">
+          <h4 className="text-sm font-bold uppercase text-footer-foreground">Clinical Categories</h4>
+          <ul className="mt-7 text-base text-footer-muted">
+            {CATEGORIES.slice(0, 5).map((c, index) => <li key={c.slug} className="border-b border-footer-border last:border-b-0"><Link to="/products/$slug" params={{ slug: c.slug }} className="flex items-center gap-4 py-4 transition hover:text-footer-accent"><span className="grid h-7 w-7 shrink-0 place-items-center border border-footer-border font-mono text-xs text-footer-accent">{index + 1}</span><span>{c.name}</span></Link></li>)}
           </ul>
         </div>
-
-        <div className="md:col-span-3">
-          <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">Get in Touch</h4>
-          <ul className="mt-5 space-y-3 text-sm text-topbar-foreground/75">
-            <li>
-              <a href={`https://maps.google.com/?q=${encodeURIComponent(COMPANY.address)}`} target="_blank" rel="noreferrer" className="flex items-start gap-2 hover:text-accent">
-                <span className="mt-0.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                {COMPANY.address}
-              </a>
-            </li>
-            {COMPANY.phones.map((p) => (
-              <li key={p}>
-                <a href={`tel:${p.replace(/\s/g, "")}`} className="flex items-center gap-2 font-semibold text-white hover:text-accent">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-                  {p}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2 hover:text-accent">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-                {COMPANY.email}
-              </a>
-            </li>
+        <div className="min-w-0">
+          <h4 className="text-sm font-bold uppercase text-footer-foreground">Contact Desk</h4>
+          <ul className="mt-9 space-y-6 text-base text-footer-muted">
+            <li><a href={`https://maps.google.com/?q=${encodeURIComponent(COMPANY.address)}`} target="_blank" rel="noreferrer" className="flex items-start gap-4 hover:text-footer-accent"><MapPin className="mt-1 h-5 w-5 shrink-0 text-footer-accent" /><span>{COMPANY.address}</span></a></li>
+            <li className="flex items-start gap-4"><Phone className="mt-1 h-5 w-5 shrink-0 text-footer-accent" /><div>{COMPANY.phones.map((phone) => <a key={phone} href={`tel:${phone.replace(/\s/g, "")}`} className="block font-semibold text-footer-foreground hover:text-footer-accent">{phone}</a>)}</div></li>
+            <li><a href={`mailto:${COMPANY.email}`} className="flex items-start gap-4 hover:text-footer-accent"><Mail className="mt-1 h-5 w-5 shrink-0 text-footer-accent" /><span className="break-all">{COMPANY.email}</span></a></li>
           </ul>
         </div>
       </div>
 
-      <div className="border-t border-white/10 bg-black/20">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-xs text-topbar-foreground/60">
+      <div className="border-t border-footer-border">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-xs text-footer-muted">
           <div>© {new Date().getFullYear()} Zentramed Health. All rights reserved.</div>
           <div className="flex items-center gap-4">
-            <span className="text-white/50">{COMPANY.social}</span>
-            <span className="hidden h-3 w-px bg-white/20 sm:block" />
+            <span>{COMPANY.social}</span>
+            <span className="hidden h-3 w-px bg-footer-border sm:block" />
             <span>Nairobi · Kenya</span>
           </div>
         </div>

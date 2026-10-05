@@ -43,6 +43,11 @@
   --color-brand-accent-foreground: var(--brand-accent-foreground);
   --color-topbar: var(--topbar);
   --color-topbar-foreground: var(--topbar-foreground);
+  --color-footer: var(--footer);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-footer-muted: var(--footer-muted);
+  --color-footer-accent: var(--footer-accent);
+  --color-footer-border: var(--footer-border);
   --color-featured: var(--featured);
   --color-featured-foreground: var(--featured-foreground);
   --color-featured-soft: var(--featured-soft);
@@ -90,6 +95,11 @@
 
   --topbar: oklch(0.28 0.058 250);
   --topbar-foreground: oklch(0.985 0 0);
+  --footer: #031424;
+  --footer-foreground: #f5f8fa;
+  --footer-muted: #92a6b8;
+  --footer-accent: #68cbd5;
+  --footer-border: #203443;
 
   /* Featured Products — deliberately off-brand amber so it stands out in the nav */
   --featured: oklch(0.72 0.17 62);
