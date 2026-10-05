@@ -35,13 +35,13 @@ export function SiteHeader() {
   }, [open]);
 
   useEffect(() => {
-    if (!cats) return;
+    if (!cats || open) return;
     const close = (e: MouseEvent) => {
       if (browseRef.current && !browseRef.current.contains(e.target as Node)) setCats(false);
     };
     document.addEventListener("mousedown", close);
     return () => document.removeEventListener("mousedown", close);
-  }, [cats]);
+  }, [cats, open]);
 
   useEffect(() => {
     if (!catOpen) return;
