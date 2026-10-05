@@ -59,7 +59,7 @@ function HomePage() {
                 loading={idx === 0 ? "eager" : "lazy"}
                 decoding="async"
                 fetchPriority={idx === 0 ? "high" : "low"}
-                className="absolute inset-0 h-full w-full object-contain object-center"
+                className="absolute inset-0 h-full w-full object-contain object-center md:object-cover"
               />
               <div className="pointer-events-none absolute inset-0 bg-hero-mobile md:hidden" />
               <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-2/3 md:block" style={{ background: "var(--gradient-hero)" }} />
