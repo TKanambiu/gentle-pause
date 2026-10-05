@@ -3,7 +3,6 @@ import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { PageHero } from "./about";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { COMPANY } from "@/data/catalogue";
 import { useState } from "react";
 
 export const Route = createFileRoute("/services")({
