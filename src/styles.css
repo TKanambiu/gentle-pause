@@ -5,6 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --container-7xl: 100%;
+  --container-6xl: 100%;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -119,6 +121,9 @@
 
 @keyframes partner-marquee { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 .animate-partner-marquee { animation: partner-marquee 80s linear infinite; }
+@keyframes featured-scroll { from { transform: translateX(0); } to { transform: translateX(-25%); } }
+.featured-track { animation: featured-scroll 32s linear infinite; }
 @media (prefers-reduced-motion: reduce) {
-  .animate-partner-marquee, .animate-cat-marquee { animation: none; }
+  .animate-partner-marquee, .animate-cat-marquee, .featured-track { animation: none; }
+  .featured-track { max-width: 100%; overflow-x: auto; }
 }
