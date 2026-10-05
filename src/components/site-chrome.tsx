@@ -104,7 +104,7 @@ export function SiteHeader() {
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-1.5 md:flex md:justify-between md:gap-6 md:px-4 md:py-2">
           <Link to="/" className="flex h-12 min-w-0 items-center md:h-16 md:shrink-0" aria-label="Zentramed Health home">
             <img
-              src={logoAsset.url}
+              src={LOGO_URL}
               alt="Zentramed Health — Advancing Healthcare and Humanitarian Solutions"
               loading="eager"
               decoding="sync"
