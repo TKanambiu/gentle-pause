@@ -47,6 +47,7 @@
   --color-featured-foreground: var(--featured-foreground);
   --color-featured-soft: var(--featured-soft);
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -139,6 +140,7 @@
 @keyframes featured-scroll { from { transform: translateX(0); } to { transform: translateX(-25%); } }
 .featured-track { animation: featured-scroll 32s linear infinite; }
 .featured-track-paused { animation-play-state: paused; }
+.about-content h1, .about-content h2, .about-content h3 { font-family: var(--font-editorial); }
 @media (prefers-reduced-motion: reduce) {
   .animate-partner-marquee, .animate-cat-marquee, .featured-track { animation: none; }
   .featured-track { max-width: 100%; overflow-x: auto; }
