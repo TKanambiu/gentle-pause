@@ -15,3 +15,4 @@
 - Keep SPA output in dist/client with Apache fallback to _shell.html; cPanel serves static files without an application server.
 - Use the existing live site's public Supabase connection for browser-only staff sign-in; the operations editor remains on the live console, and no private data is exposed by the local sign-in screen.
 - Use full-width large content container tokens while keeping readable text blocks and forms constrained; this removes desktop gutters without stretching login forms.
+- Derive the header category navigation and overflow menu from the shared catalogue so category links remain aligned with product pages.
