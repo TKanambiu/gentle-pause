@@ -155,8 +155,11 @@
 @keyframes featured-scroll { from { transform: translateX(0); } to { transform: translateX(-25%); } }
 .featured-track { animation: featured-scroll 32s linear infinite; }
 .featured-track-paused { animation-play-state: paused; }
+@keyframes svc-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.svc-track { animation: svc-scroll 36s linear infinite; }
+.svc-track-paused { animation-play-state: paused; }
 .about-content h1, .about-content h2, .about-content h3 { font-family: var(--font-editorial); }
 @media (prefers-reduced-motion: reduce) {
-  .animate-partner-marquee, .animate-cat-marquee, .featured-track { animation: none; }
+  .animate-partner-marquee, .animate-cat-marquee, .featured-track, .svc-track { animation: none; }
   .featured-track { max-width: 100%; overflow-x: auto; }
 }
