@@ -90,7 +90,7 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0; }
 }
 
 @keyframes pulse-ring {
@@ -116,3 +116,9 @@
 }
 .animate-cat-marquee { animation: cat-marquee 40s linear infinite; }
 
+
+@keyframes partner-marquee { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.animate-partner-marquee { animation: partner-marquee 80s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-partner-marquee, .animate-cat-marquee { animation: none; }
+}

@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep homepage slide content in a browser-safe data module shared with image preloading so photography and preload references stay aligned.
+- Use static CDN asset pointers for the known partner logo collection; a runtime logo service is unnecessary.

@@ -17,6 +17,8 @@ export const Route = createFileRoute("/products/")({
       { name: "description", content: "Browse Zentramed Health's full catalogue — PPE, lab diagnostics, imaging, oxygen therapy, hospital furniture, neonatal & surgical theatre equipment." },
       { property: "og:title", content: "Zentramed Health Product Catalogue" },
       { property: "og:description", content: "Full catalogue of medical supplies and equipment." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ProductsPage,

@@ -6,10 +6,12 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { HERO_SLIDES } from "@/data/hero-slides";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -34,7 +36,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -91,10 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preload", as: "image", href: "/logo-wide.png", fetchPriority: "high" },
-      { rel: "preload", as: "image", href: "/hero1.webp", fetchPriority: "high" },
-      { rel: "prefetch", as: "image", href: "/hero2.webp" },
-      { rel: "prefetch", as: "image", href: "/hero3.webp" },
-      { rel: "prefetch", as: "image", href: "/hero4.webp" },
+      { rel: "preload", as: "image", href: HERO_SLIDES[0]?.img, fetchPriority: "high" },
     ],
   }),
   shellComponent: RootShell,

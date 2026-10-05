@@ -5,66 +5,13 @@ import { CATEGORIES, COMPANY } from "@/data/catalogue";
 import { useEffect, useRef, useState } from "react";
 import { CategoryMarquee } from "@/components/category-marquee";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import warehouseAsset from "@/assets/site/warehouse.png.asset.json";
+import { PARTNER_LOGOS } from "@/data/partner-logos";
+import { HERO_SLIDES } from "@/data/hero-slides";
+import { Button } from "@/components/ui/button";
 
 
-const SLIDES = [
-  {
-    img: "/hero1.webp",
-    eyebrow: "Molecular Diagnostics",
-    title: "Yuanzan VQ-200",
-    accent: "qPCR System.",
-    body: "True diagnostic freedom — a high-precision, 96-well real-time PCR system that is completely open and affordable.",
-    bullets: [
-      "Consumable freedom: works with any brand of tubes, strips and plates",
-      "Built-in 9\" touchscreen with embedded computer — no external PC",
-      "Elite thermal uniformity ≤ ± 0.15°C, beating industry standards",
-      "Motorized lid & auto-loading chamber — ready for robotic integration",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the Yuanzan VQ-200 qPCR System.",
-  },
-  {
-    img: "/hero2.webp",
-    eyebrow: "Ophthalmic Solutions",
-    title: "Ophthalmic Refraction",
-    accent: "Unit — Eye Exam Workshop.",
-    body: "Complete ophthalmic refraction workstations for hospitals, clinics and optical centres — accurate, ergonomic and clinic-ready.",
-    bullets: [
-      "Integrated chair, stand and instrument arms for full eye exams",
-      "Precision refraction, tonometry and slit-lamp mounting",
-      "Smooth motorised height and positioning controls",
-      "Installation, calibration and operator training included",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the Ophthalmic Refraction Unit.",
-  },
-  {
-    img: "/hero3.webp",
-    eyebrow: "Rapid Diagnostics",
-    title: "HIV Rapid",
-    accent: "Test Kit.",
-    body: "Laboratory-grade accuracy right at the point of care — rapid, reliable and equipment-free screening.",
-    bullets: [
-      "100% accuracy — certified sensitivity and specificity",
-      "Ultra-fast results in 15–25 minutes",
-      "Micro sample: only 40µl whole blood, serum or plasma",
-      "WHO PQ & CE IVDR compliant · stable 24 months at 4–30°C",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the HIV Rapid Test Kits.",
-  },
-  {
-    img: "/hero4.webp",
-    eyebrow: "Renal Care",
-    title: "Wesley W-T6008S",
-    accent: "Hemodialysis Machine.",
-    body: "Advanced blood purification for acute and chronic renal failure — intelligent automation with rigorous real-time monitoring.",
-    bullets: [
-      "All-in-one therapy: HD, on-line HDF and isolated ultrafiltration",
-      "Closed volume balance chamber for hyper-accurate fluid control",
-      "15\" touchscreen with guided visual and audible alarms",
-      "30-minute backup battery keeps the blood pump running on power loss",
-    ],
-    waText: "Hello Zentramed Health, I'd like to order the Wesley W-T6008S Hemodialysis Machine.",
-  },
-];
+const SLIDES = HERO_SLIDES;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -73,6 +20,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Zentramed Health is a trusted Nairobi-based supplier of medical supplies, hospital equipment, laboratory diagnostics and humanitarian healthcare solutions across Africa." },
       { property: "og:title", content: "Zentramed Health | Medical Equipment Supplier in Nairobi" },
       { property: "og:description", content: "Quality medical supplies, hospital equipment and healthcare solutions across Africa." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HomePage,
@@ -99,15 +48,15 @@ function HomePage() {
             <div key={idx} className="relative h-full shrink-0 bg-brand" style={{ width: `${100 / SLIDES.length}%` }}>
               <img
                 src={s.img}
-                alt=""
-                loading="eager"
+                alt={`${s.eyebrow} — ${s.title} ${s.accent}`}
+                loading={idx === 0 ? "eager" : "lazy"}
                 decoding="async"
                 fetchPriority={idx === 0 ? "high" : "low"}
                 className="absolute inset-0 h-full w-full object-contain md:object-cover object-center"
               />
               <div className="pointer-events-none absolute inset-y-0 left-0 w-full md:w-2/3" style={{ background: "var(--gradient-hero)" }} />
               <div className="absolute inset-0 mx-auto flex h-full max-w-7xl items-center px-4">
-                <div className="max-w-2xl text-white">
+                <div className="max-w-xl text-brand-foreground">
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-foreground shadow-lg">
                     {s.eyebrow}
                   </div>
@@ -115,15 +64,7 @@ function HomePage() {
                     {s.title}{" "}
                     <span className="text-accent">{s.accent}</span>
                   </h1>
-                  <p className="mt-3 max-w-xl text-sm text-white/95 drop-shadow md:text-base">{s.body}</p>
-                  <ul className="mt-4 space-y-1.5 text-sm text-white/95 md:text-[15px]">
-                    {s.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 drop-shadow">
-                        <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-3 max-w-lg text-sm text-brand-foreground drop-shadow md:text-base">{s.body}</p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     <WhatsAppButton text={s.waText} />
                     <Link to="/contact" className="rounded-md border-2 border-white/80 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm hover:bg-white/20">
@@ -137,10 +78,12 @@ function HomePage() {
         </div>
         <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
           {SLIDES.map((_, idx) => (
-            <button
+            <Button
+              variant="ghost"
               key={idx}
               onClick={() => setI(idx)}
-              className={`h-2 rounded-full transition-all ${idx === i ? "w-10 bg-accent" : "w-2 bg-white/60 hover:bg-white/90"}`}
+              className={`h-3 min-w-0 rounded-full p-0 transition-all ${idx === i ? "w-10 bg-brand-foreground" : "w-3 bg-brand-foreground/50 hover:bg-brand-foreground/90"}`}
+              aria-pressed={idx === i}
               aria-label={`Slide ${idx + 1}`}
             />
           ))}
@@ -167,62 +110,6 @@ function HomePage() {
       </section>
 
 
-      {/* About — editorial, professional */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background via-muted/30 to-background py-20">
-        <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-brand/5 blur-3xl" />
-        <div className="pointer-events-none absolute -right-40 bottom-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 md:grid-cols-2">
-          <div className="relative">
-            <div className="absolute -left-4 -top-4 hidden h-full w-full rounded-2xl border-2 border-accent/40 md:block" />
-            <div className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-2xl bg-gradient-to-br from-brand/20 to-accent/20 md:block" />
-            <img
-              src="/medical-grade-storage-facility.webp"
-              alt="Zentramed medical-grade storage facility"
-              className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl ring-1 ring-border"
-              loading="lazy"
-            />
-            <div className="absolute -bottom-8 -right-6 hidden rounded-xl bg-background p-5 shadow-2xl ring-1 ring-border md:block">
-              <div>
-                <div className="font-display text-2xl font-bold text-brand">15+ Years</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">Industry expertise</div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
-              <span className="h-px w-10 bg-accent" /> About Zentramed Health
-            </div>
-            <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-brand md:text-5xl">
-              Advancing healthcare, <span className="italic text-accent">together.</span>
-            </h2>
-            <div className="mt-6 border-l-2 border-accent/60 pl-5">
-              <p className="text-muted-foreground md:text-lg">
-                Zentramed Health is a trusted supplier of high-quality medical supplies, equipment and
-                solutions to hospitals, clinics, NGOs, government institutions and humanitarian organizations
-                across Africa. Our mission is to improve health outcomes by delivering quality, innovation
-                and exceptional service.
-              </p>
-            </div>
-            <dl className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                { t: "Quality Assured Sourcing", d: "ISO-certified suppliers only." },
-                { t: "Wide Product Range", d: "9 categories, 500+ SKUs." },
-                { t: "Reliable Delivery", d: "Nationwide, cold-chain ready." },
-                { t: "Customer-First Support", d: "Dedicated account managers." },
-              ].map((v) => (
-                <div key={v.t} className="group rounded-xl border-l-2 border-accent/60 bg-background/70 p-4 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-accent hover:shadow-md">
-                  <dt className="font-display text-sm font-bold text-brand">{v.t}</dt>
-                  <dd className="mt-1 text-xs text-muted-foreground">{v.d}</dd>
-                </div>
-              ))}
-            </dl>
-            <Link to="/about" className="mt-10 inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-brand to-brand/80 px-6 py-3 text-sm font-semibold text-brand-foreground shadow-lg transition hover:brightness-110">
-              Learn more about us →
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Categories grid */}
       <section className="bg-muted/40 py-14">
         <div className="mx-auto max-w-7xl px-4">
@@ -241,6 +128,59 @@ function HomePage() {
             <CategoryMarquee categories={CATEGORIES} />
           </div>
 
+        </div>
+      </section>
+
+      {/* About — editorial, professional */}
+      <section className="overflow-hidden border-y border-border bg-background py-16 lg:py-20">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 lg:grid-cols-2">
+          <div className="relative">
+            <div className="absolute -left-4 -top-4 hidden h-full w-full border border-brand/30 md:block" />
+            <img
+              src={warehouseAsset.url}
+              alt="Zentramed medical-grade storage facility"
+              className="relative aspect-[5/4] w-full object-cover shadow-xl"
+              loading="lazy"
+            />
+            <div className="absolute bottom-0 right-0 bg-brand px-6 py-5 text-brand-foreground shadow-xl">
+              <div>
+                <div className="font-display text-3xl font-bold">15+ Years</div>
+                <div className="mt-1 font-mono text-[10px] uppercase">Industry expertise</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
+              <span className="h-px w-10 bg-accent" /> About Zentramed Health
+            </div>
+            <h2 className="mt-5 font-display text-3xl font-bold leading-tight text-foreground md:text-4xl">
+              Advancing healthcare, together.
+            </h2>
+            <div className="mt-6 border-l-2 border-accent/60 pl-5">
+              <p className="text-muted-foreground md:text-lg">
+                Zentramed Health is a trusted supplier of high-quality medical supplies, equipment and
+                solutions to hospitals, clinics, NGOs, government institutions and humanitarian organizations
+                across Africa. Our mission is to improve health outcomes by delivering quality, innovation
+                and exceptional service.
+              </p>
+            </div>
+            <dl className="mt-7 grid border-y border-border sm:grid-cols-2">
+              {[
+                { t: "Quality Assured Sourcing", d: "ISO-certified suppliers only." },
+                { t: "Wide Product Range", d: "9 categories, 500+ SKUs." },
+                { t: "Reliable Delivery", d: "Nationwide, cold-chain ready." },
+                { t: "Customer-First Support", d: "Dedicated account managers." },
+              ].map((v) => (
+                <div key={v.t} className="border-b border-border py-4 sm:odd:border-r sm:odd:pr-5 sm:even:pl-5 sm:[&:nth-last-child(-n+2)]:border-b-0">
+                  <dt className="font-display text-sm font-bold text-brand">{v.t}</dt>
+                  <dd className="mt-1 text-xs text-muted-foreground">{v.d}</dd>
+                </div>
+              ))}
+            </dl>
+            <Link to="/about" className="mt-10 inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-brand to-brand/80 px-6 py-3 text-sm font-semibold text-brand-foreground shadow-lg transition hover:brightness-110">
+              Learn more about us →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -306,10 +246,11 @@ function HomePage() {
 
       {/* CTA */}
       <section className="bg-topbar text-topbar-foreground">
-        <div className="mx-auto grid max-w-7xl items-center gap-6 px-4 py-14 md:grid-cols-[1fr_auto]">
+        <div className="mx-auto grid max-w-7xl items-center gap-6 px-4 py-20 md:grid-cols-[1fr_auto]">
           <div>
-            <h2 className="font-display text-3xl font-bold md:text-4xl">Ready to equip your facility?</h2>
-            <p className="mt-2 text-brand-foreground/80">Talk to our team for tailored quotes, bulk orders and technical advice.</p>
+            <div className="text-xs font-bold uppercase">Let's Talk</div>
+            <h2 className="mt-5 font-display text-3xl font-bold md:text-5xl">Ready to equip <span className="block font-normal text-topbar-foreground/70">your facility?</span></h2>
+            <p className="mt-2 text-brand-foreground/80">Tailored quotes, bulk orders and technical advice — from a team that answers within the hour.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <WhatsAppButton />
@@ -468,57 +409,19 @@ function CountUp({ end, duration = 1800 }: { end: number; duration?: number }) {
 }
 
 
-const PARTNERS = [
-  { name: "3M", domain: "3m.com" },
-  { name: "Omron", domain: "omronhealthcare.com" },
-  { name: "Mindray", domain: "mindray.com" },
-  { name: "Olympus", domain: "olympus-global.com" },
-  { name: "Sritrang", domain: "sritranggloves.com" },
-  { name: "Polymed", domain: "polymedicure.com" },
-  { name: "Medica", domain: "medicagroup.com" },
-  { name: "Haier", domain: "haiermedical.com" },
-];
-
 function PartnershipsSection() {
   return (
     <section className="bg-muted/30 py-16">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="text-center">
-          <div className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent">
-            <span className="h-px w-10 bg-accent" /> Global Manufacturers <span className="h-px w-10 bg-accent" />
-          </div>
-          <h2 className="mt-3 font-display text-3xl font-bold text-brand md:text-4xl">Our Brand Partnerships</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            We partner with ISO-certified global manufacturers to bring you trusted medical technology.
-          </p>
-        </div>
-        <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
-          {PARTNERS.map((p) => (
-            <div
-              key={p.name}
-              className="group relative flex aspect-[5/3] items-center justify-center overflow-hidden rounded-2xl border-4 border-brand bg-background shadow-[0_10px_30px_-12px_rgba(0,0,0,0.25)] ring-1 ring-brand/20 transition hover:-translate-y-1.5 hover:border-accent hover:shadow-[0_18px_40px_-14px_rgba(0,0,0,0.35)]"
-              title={p.name}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand/5 via-transparent to-accent/5" />
-              <div className="relative flex h-full w-full flex-col items-center justify-center px-4">
-                <img
-                  src={`https://logo.clearbit.com/${p.domain}`}
-                  alt={`${p.name} logo`}
-                  loading="lazy"
-                  className="max-h-16 max-w-[80%] object-contain transition duration-300 group-hover:scale-105"
-                  onError={(e) => {
-                    const el = e.currentTarget;
-                    el.replaceWith(Object.assign(document.createElement("span"), {
-                      className: "font-display text-2xl font-extrabold tracking-tight text-brand",
-                      textContent: p.name,
-                    }));
-                  }}
-                />
-                <span className="mt-3 text-xs font-bold uppercase tracking-widest text-brand/80">
-                  {p.name}
-                </span>
-              </div>
-              <div className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-brand via-accent to-brand" />
+      <div className="mx-auto max-w-7xl px-4 text-center">
+        <div className="text-xs font-bold uppercase text-accent">Global Manufacturers</div>
+        <h2 className="mt-3 font-display text-3xl font-bold text-brand md:text-4xl">Our Brand Partnerships</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">We partner with ISO-certified global manufacturers to bring you trusted medical technology.</p>
+      </div>
+      <div className="group mt-10 overflow-hidden">
+        <div className="flex w-max gap-6 animate-partner-marquee group-hover:[animation-play-state:paused]">
+          {[...PARTNER_LOGOS, ...PARTNER_LOGOS].map((logo, index) => (
+            <div key={index} className="flex h-24 w-44 shrink-0 items-center justify-center rounded-lg border border-border bg-background px-6 shadow-sm">
+              <img src={logo} alt="Partner brand logo" loading="lazy" decoding="async" className="max-h-14 max-w-full object-contain" />
             </div>
           ))}
         </div>
@@ -537,7 +440,8 @@ function WhyChooseUsSection() {
   return (
     <section className="bg-background py-20">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className="font-display text-3xl font-bold text-accent md:text-4xl">Why Choose Us</h2>
+        <div className="text-xs font-bold uppercase text-accent">Why Choose Us</div>
+        <h2 className="mt-5 font-display text-3xl font-bold text-brand md:text-5xl">Depth, scale <span className="block font-normal text-muted-foreground">and follow-through.</span></h2>
         <p className="mt-6 max-w-5xl text-muted-foreground md:text-lg">
           As a trusted supplier of{" "}
           <span className="font-semibold text-accent">end-to-end medical equipment and solutions</span>{" "}

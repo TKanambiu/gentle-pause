@@ -22,6 +22,8 @@ export const Route = createFileRoute("/products/$slug")({
           { name: "description", content: loaderData.category.description },
           { property: "og:title", content: `${loaderData.category.name} | Zentramed Health` },
           { property: "og:description", content: loaderData.category.description },
+          { property: "og:type", content: "website" },
+          { name: "twitter:card", content: "summary_large_image" },
         ]
       : [],
   }),

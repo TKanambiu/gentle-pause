@@ -12,6 +12,8 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Installation, maintenance, training, humanitarian supply and custom sourcing services from Zentramed Health." },
       { property: "og:title", content: "Zentramed Health Services" },
       { property: "og:description", content: "End-to-end support for hospitals, clinics and NGOs." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ServicesPage,

@@ -14,6 +14,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contact Zentramed Health for medical equipment quotes, orders and technical support. Based at Bazaar Plaza, Nairobi, Kenya." },
       { property: "og:title", content: "Contact Zentramed Health" },
       { property: "og:description", content: "Reach us for quotes, orders and support." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ContactPage,
