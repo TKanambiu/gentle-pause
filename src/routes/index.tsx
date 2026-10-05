@@ -40,7 +40,7 @@ function HomePage() {
       <SiteHeader />
 
       {/* Hero slider — horizontal slide-left with visible imagery */}
-      <section className="relative h-[520px] w-full overflow-hidden bg-brand sm:h-[560px] md:h-[600px]">
+      <section className="relative h-[calc(100dvh-96px)] max-h-[820px] min-h-[420px] w-full overflow-hidden bg-brand md:h-[calc(100dvh-160px)]">
         <div
           className="flex h-full transition-transform duration-[900ms] ease-[cubic-bezier(0.65,0,0.35,1)]"
           style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${i * (100 / SLIDES.length)}%)` }}
@@ -59,12 +59,12 @@ function HomePage() {
                 loading={idx === 0 ? "eager" : "lazy"}
                 decoding="async"
                 fetchPriority={idx === 0 ? "high" : "low"}
-                className="absolute inset-0 h-full w-full object-contain object-center md:object-cover"
+                className="absolute inset-0 h-full w-full object-contain object-center"
               />
               <div className="pointer-events-none absolute inset-0 bg-hero-mobile md:hidden" />
               <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-2/3 md:block" style={{ background: "var(--gradient-hero)" }} />
               <div className="absolute inset-0 mx-auto flex h-full max-w-7xl items-center px-4">
-                <div className="mt-24 max-w-xl text-brand-foreground sm:mt-28 md:mt-0">
+                <div className="max-w-xl text-brand-foreground">
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-foreground shadow-lg">
                     {s.eyebrow}
                   </div>
