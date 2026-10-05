@@ -197,8 +197,6 @@ export function SiteHeader() {
           ))}
           <div
             ref={browseRef}
-            onMouseEnter={() => setCats(true)}
-            onMouseLeave={() => setCats(false)}
             onKeyDown={(e) => { if (e.key === "Escape") setCats(false); }}
             className="relative"
           >
