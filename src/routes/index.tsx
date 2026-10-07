@@ -30,6 +30,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const [i, setI] = useState(0);
+  const [svcPaused, setSvcPaused] = useState(false);
   useEffect(() => {
     const t = setInterval(() => setI((v) => (v + 1) % SLIDES.length), 6000);
     return () => clearInterval(t);
@@ -135,8 +136,8 @@ function HomePage() {
 
       <FeaturedMarquee />
 
-      {/* Services */}
-      <section className="relative overflow-hidden py-20">
+      {/* Services — single-line alternating rotator */}
+      <section className="relative overflow-hidden py-14">
         <div className="absolute inset-0 bg-gradient-to-br from-brand via-brand to-topbar" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
         <div className="relative mx-auto max-w-7xl px-4">
@@ -151,37 +152,48 @@ function HomePage() {
               From procurement to installation, training and maintenance — we stand behind every product we deliver.
             </p>
           </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { image: "/svc-installation.webp", title: "Equipment Installation", body: "Professional installation of hospital, laboratory and imaging equipment." },
-              { image: "/svc-maintenance.webp", title: "Maintenance & Repair", body: "Preventive maintenance contracts and rapid on-site repair services." },
-              { image: "/svc-training.webp", title: "Training & Commissioning", body: "Operator training and commissioning to get your team confident from day one." },
-              { image: "/svc-humanitarian.webp", title: "Humanitarian Supply", body: "Bulk supply to NGOs and government programs with reliable logistics." },
-              { image: "/svc-custom-sourcing.webp", title: "Custom Sourcing", body: "Can't find what you need? We source certified products globally on request." },
-              { image: "/svc-delivery.webp", title: "Regional Delivery", body: "Timely and secure delivery across Kenya and East Africa." },
-            ].map((s, idx) => (
+          <div
+            className="group mx-auto mt-10 w-full max-w-4xl"
+            role="region"
+            aria-label="Our services"
+            onPointerEnter={() => setSvcPaused(true)}
+            onPointerLeave={() => setSvcPaused(false)}
+            onFocusCapture={() => setSvcPaused(true)}
+            onBlurCapture={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setSvcPaused(false); }}
+          >
+            <div className={`relative h-28 md:h-32 ${svcPaused ? "svc-rotator-paused" : ""}`}>
+              {[
+                { image: "/svc-installation.webp", title: "Equipment Installation", body: "Professional installation of hospital, laboratory and imaging equipment." },
+                { image: "/svc-maintenance.webp", title: "Maintenance & Repair", body: "Preventive maintenance contracts and rapid on-site repair services." },
+                { image: "/svc-training.webp", title: "Training & Commissioning", body: "Operator training and commissioning to get your team confident from day one." },
+                { image: "/svc-humanitarian.webp", title: "Humanitarian Supply", body: "Bulk supply to NGOs and government programs with reliable logistics." },
+                { image: "/svc-custom-sourcing.webp", title: "Custom Sourcing", body: "Can't find what you need? We source certified products globally on request." },
+                { image: "/svc-delivery.webp", title: "Regional Delivery", body: "Timely and secure delivery across Kenya and East Africa." },
+              ].map((s, idx) => (
                 <div
                   key={s.title}
-                  className="group relative overflow-hidden rounded-2xl bg-white/[0.06] shadow-lg ring-1 ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:ring-accent/60"
+                  aria-hidden={idx !== 0 ? true : undefined}
+                  className={`svc-cycle absolute inset-0 flex items-center gap-4 rounded-2xl bg-white/[0.08] shadow-lg ring-1 ring-white/15 backdrop-blur-sm md:gap-6 ${idx % 2 === 0 ? "" : "svc-cycle-right"}`}
+                  style={{ animationDelay: `${idx * 4}s` }}
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-l-2xl md:h-20 md:w-32">
                     <img
                       src={s.image}
-                      alt={s.title}
+                      alt={idx === 0 ? s.title : ""}
                       loading="lazy"
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      className="h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand via-brand/40 to-transparent" />
-                    <span className="absolute right-4 top-4 font-display text-3xl font-black text-white/30">
+                    <span className="absolute right-2 top-1 font-display text-lg font-black text-white/40">
                       0{idx + 1}
                     </span>
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-lg font-bold text-white">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-brand-foreground/80">{s.body}</p>
+                  <div className="min-w-0 pr-4">
+                    <h3 className="font-display text-base font-bold text-white md:text-lg">{s.title}</h3>
+                    <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-brand-foreground/80 md:text-sm">{s.body}</p>
                   </div>
                 </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
