@@ -15,3 +15,5 @@
 - [x] Restore uploaded warehouse and partner photos and replace the footer with the supplied lower logo; verify all images load.
 - [x] Remove the lower logo background, match the supplied footer design, and restore the upper logo; verify appearance and links.
 - [x] Move page links to the top strip and product categories into the main navigation bar; verify links and mobile access.
+- [x] Link all partner logos to public/icons and verify they load.
+- [x] Remove green hero letterboxing and size the desktop frame to the supplied photo proportions.
