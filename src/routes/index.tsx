@@ -40,19 +40,13 @@ function HomePage() {
       <SiteHeader />
 
       {/* Hero slider — horizontal slide-left with visible imagery */}
-      <section className="relative h-[calc(100dvh-96px)] max-h-[820px] min-h-[420px] w-full overflow-hidden bg-brand md:h-[calc(100dvh-160px)]">
+      <section className="relative h-[min(560px,calc(100dvh-96px))] min-h-[420px] w-full overflow-hidden bg-background md:aspect-[1672/941] md:h-auto md:max-h-[calc(100dvh-160px)] md:min-h-0">
         <div
           className="flex h-full transition-transform duration-[900ms] ease-[cubic-bezier(0.65,0,0.35,1)]"
           style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${i * (100 / SLIDES.length)}%)` }}
         >
           {SLIDES.map((s, idx) => (
-            <div key={idx} className="relative h-full shrink-0 bg-brand" style={{ width: `${100 / SLIDES.length}%` }}>
-              <img
-                src={s.img}
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full scale-105 object-cover opacity-35 blur-xl"
-              />
+            <div key={idx} className="relative h-full shrink-0 bg-background" style={{ width: `${100 / SLIDES.length}%` }}>
               <img
                 src={s.img}
                 alt={`${s.eyebrow} — ${s.title} ${s.accent}`}
