@@ -30,6 +30,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const [i, setI] = useState(0);
+  const [svcPaused, setSvcPaused] = useState(false);
   useEffect(() => {
     const t = setInterval(() => setI((v) => (v + 1) % SLIDES.length), 6000);
     return () => clearInterval(t);
