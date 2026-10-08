@@ -10,12 +10,15 @@ const WAREHOUSE_IMAGE = "/wrhs.png";
 import { PARTNER_LOGOS } from "@/data/partner-logos";
 import { HERO_SLIDES } from "@/data/hero-slides";
 import { Button } from "@/components/ui/button";
+import { OptimizedImage } from "@/components/optimized-image";
+import { imageProps } from "@/lib/optimized-images";
 
 
 const SLIDES = HERO_SLIDES;
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [{ rel: "preload", as: "image", href: imageProps(HERO_SLIDES[0]?.img).src, imageSrcSet: imageProps(HERO_SLIDES[0]?.img).srcSet, imageSizes: "100vw", fetchPriority: "high" }],
     meta: [
       { title: "Zentramed Health | Medical Equipment & Supplies in Nairobi, Kenya" },
       { name: "description", content: "Zentramed Health is a trusted Nairobi-based supplier of medical supplies, hospital equipment, laboratory diagnostics and humanitarian healthcare solutions across Africa." },
@@ -30,7 +33,11 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const [i, setI] = useState(0);
+  const [loadedSlides, setLoadedSlides] = useState(() => new Set([0, 1]));
   const [svcPaused, setSvcPaused] = useState(false);
+  useEffect(() => {
+    setLoadedSlides((previous) => new Set([...previous, i, (i + 1) % SLIDES.length]));
+  }, [i]);
   useEffect(() => {
     const t = setInterval(() => setI((v) => (v + 1) % SLIDES.length), 6000);
     return () => clearInterval(t);
@@ -41,24 +48,26 @@ function HomePage() {
       <SiteHeader />
 
       {/* Hero slider — horizontal slide-left with visible imagery */}
-      <section className="relative h-[min(560px,calc(100dvh-96px))] min-h-[420px] w-full overflow-hidden bg-background md:aspect-[1672/941] md:h-auto md:max-h-[calc(100dvh-160px)] md:min-h-0">
+      <section aria-label="Medical equipment highlights" className="relative w-full overflow-hidden bg-topbar md:aspect-[1672/941]">
         <div
-          className="flex h-full transition-transform duration-[900ms] ease-[cubic-bezier(0.65,0,0.35,1)]"
+          className="flex h-full items-stretch transition-transform duration-[900ms] ease-[cubic-bezier(0.65,0,0.35,1)] motion-reduce:transition-none"
           style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${i * (100 / SLIDES.length)}%)` }}
         >
           {SLIDES.map((s, idx) => (
-            <div key={idx} className="relative h-full shrink-0 bg-background" style={{ width: `${100 / SLIDES.length}%` }}>
-              <img
+            <div key={idx} aria-hidden={idx !== i} className="relative flex shrink-0 flex-col bg-topbar md:h-full" style={{ width: `${100 / SLIDES.length}%` }}>
+              <div className="relative aspect-[1672/941] w-full md:absolute md:inset-0 md:aspect-auto">
+              {loadedSlides.has(idx) && <OptimizedImage
                 src={s.img}
+                sizes="100vw"
                 alt={`${s.eyebrow} — ${s.title} ${s.accent}`}
-                loading={idx === 0 ? "eager" : "lazy"}
+                loading="eager"
                 decoding="async"
                 fetchPriority={idx === 0 ? "high" : "low"}
-                className="absolute inset-0 h-full w-full object-contain object-center"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-hero-mobile md:hidden" />
+                className="absolute inset-0 h-full w-full object-cover object-center"
+              />}
+              </div>
               <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-2/3 md:block" style={{ background: "var(--gradient-hero)" }} />
-              <div className="absolute inset-0 mx-auto flex h-full max-w-7xl items-center px-4">
+              <div className="relative mx-auto flex w-full flex-1 items-center px-4 pb-16 pt-6 md:absolute md:inset-0 md:h-full md:max-w-7xl md:py-10">
                 <div className="max-w-xl text-brand-foreground">
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-foreground shadow-lg">
                     {s.eyebrow}
@@ -177,7 +186,7 @@ function HomePage() {
                   style={{ animationDelay: `${idx * 4}s` }}
                 >
                   <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-l-2xl md:h-20 md:w-32">
-                    <img
+      <OptimizedImage
                       src={s.image}
                       alt={idx === 0 ? s.title : ""}
                       loading="lazy"

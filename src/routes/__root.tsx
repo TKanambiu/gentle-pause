@@ -11,7 +11,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { HERO_SLIDES } from "@/data/hero-slides";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 const LOGO_PRELOAD_URL = "/logo-wide.png";
 
@@ -94,7 +93,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preload", as: "image", href: LOGO_PRELOAD_URL, fetchPriority: "high" },
-      { rel: "preload", as: "image", href: HERO_SLIDES[0]?.img, fetchPriority: "high" },
     ],
   }),
   shellComponent: RootShell,
