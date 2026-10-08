@@ -67,7 +67,7 @@ function HomePage() {
               />}
               </div>
               <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-2/3 md:block" style={{ background: "var(--gradient-hero)" }} />
-              <div className="relative mx-auto flex w-full flex-1 items-center px-4 pb-16 pt-6 md:absolute md:inset-0 md:h-full md:max-w-7xl md:py-10">
+              <div className="relative mx-auto flex min-h-[300px] w-full flex-1 items-center px-4 pb-16 pt-6 md:absolute md:inset-0 md:h-full md:max-w-7xl md:py-10">
                 <div className="max-w-xl text-brand-foreground">
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-foreground shadow-lg">
                     {s.eyebrow}
@@ -188,6 +188,7 @@ function HomePage() {
                   <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-l-2xl md:h-20 md:w-32">
       <OptimizedImage
                       src={s.image}
+                      sizes="128px"
                       alt={idx === 0 ? s.title : ""}
                       loading="lazy"
                       className="h-full w-full object-cover"
@@ -212,8 +213,9 @@ function HomePage() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 lg:grid-cols-2">
           <div className="relative">
             <div className="absolute -left-4 -top-4 hidden h-full w-full border border-brand/30 md:block" />
-            <img
+            <OptimizedImage
               src={WAREHOUSE_IMAGE}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Zentramed medical-grade storage and distribution facility"
               className="relative aspect-[5/4] w-full object-cover shadow-xl"
               loading="lazy"
@@ -355,10 +357,11 @@ function TestimonialsSection() {
               >
                 <div className="flex items-center gap-3 border-b border-dashed border-border pb-3">
                   <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-brand to-topbar p-0.5 ring-2 ring-accent/40 transition group-hover:scale-105">
-                    <img
+                    <OptimizedImage
                       src={t.avatar}
+                      sizes="56px"
                       alt={t.name}
-                      loading="eager"
+                      loading="lazy"
                       decoding="async"
                       width={56}
                       height={56}
@@ -446,7 +449,7 @@ function PartnershipsSection() {
         <div className="flex w-max gap-6 animate-partner-marquee group-hover:[animation-play-state:paused]">
           {[...PARTNER_LOGOS, ...PARTNER_LOGOS].map((logo, index) => (
             <div key={index} className="flex h-24 w-44 shrink-0 items-center justify-center rounded-lg border border-border bg-background px-6 shadow-sm">
-              <img src={logo} alt="Partner brand logo" loading="lazy" decoding="async" className="max-h-14 max-w-full object-contain" />
+              <OptimizedImage src={logo} alt="Partner brand logo" loading="lazy" decoding="async" className="max-h-14 max-w-full object-contain" />
             </div>
           ))}
         </div>

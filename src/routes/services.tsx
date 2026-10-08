@@ -1,3 +1,4 @@
+import { OptimizedImage } from "@/components/optimized-image";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
@@ -53,8 +54,9 @@ function ServicesPage() {
                 style={{ animationDelay: `${idx * 4}s` }}
               >
                 <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-xl md:h-24 md:w-40">
-                  <img
+                  <OptimizedImage
                     src={s.image}
+                    sizes="160px"
                     alt={idx === 0 ? s.title : ""}
                     loading="lazy"
                     className="h-full w-full object-cover"

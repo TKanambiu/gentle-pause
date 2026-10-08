@@ -16,3 +16,6 @@
 - Use the existing live site's public Supabase connection for browser-only staff sign-in; the operations editor remains on the live console, and no private data is exposed by the local sign-in screen.
 - Use full-width large content container tokens while keeping readable text blocks and forms constrained; this removes desktop gutters without stretching login forms.
 - Derive the header category navigation and overflow menu from the shared catalogue so category links remain aligned with product pages.
+
+- Use the shared optimized-photo manifest and image component for responsive static WebP variants; keep unknown remote uploads unchanged so catalogue URLs remain compatible.
+- Generate supplied homepage photo variants in public/NewHeros and host other optimized photo variants via asset pointers; preload only the homepage’s first photo in its leaf route.
