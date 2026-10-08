@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 const FEATURED = [
   { name: "WT-T6000S Hemodialysis", category: "Free placement programme", image: "/NewHeros/WESLEY dialysis machine and sterile accessories.png", hash: "dialysis" },
   { name: "VQ-200 Real-Time PCR", category: "Molecular diagnostics", image: "/featured/vq200-qpcr.jpg", hash: "qpcr" },
-  { name: "KHB HIV (1+2) Rapid Test", category: "Rapid testing", image: "/featured/hiv-kit.jpg", hash: "hiv" },
+  { name: "KHB HIV (1+2) Rapid Test", category: "Rapid testing", image: "/KHB HIV Diagnostic Test Kit.png", hash: "hiv" },
   { name: "AST-1000 Workstation", category: "Ophthalmic equipment", image: "/featured/ast-1000-poster.jpg", hash: "ophthalmic" },
 ];
 

@@ -5,6 +5,7 @@ import { whatsappLink } from "@/lib/whatsapp";
 import { getCategory, COMPANY, CATEGORIES, formatKES, type Category } from "@/data/catalogue";
 import { ChevronRight, MessageCircle, Search as SearchIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLiveCategories } from "@/lib/live-catalogue";
 
 export const Route = createFileRoute("/products/$slug")({
   validateSearch: (s: Record<string, unknown>): { q?: string } => ({
@@ -41,7 +42,9 @@ export const Route = createFileRoute("/products/$slug")({
 });
 
 function CategoryPage() {
-  const { category } = Route.useLoaderData() as { category: Category };
+  const { category: staticCategory } = Route.useLoaderData() as { category: Category };
+  const live = useLiveCategories();
+  const category = live.find((c) => c.slug === staticCategory.slug) ?? staticCategory;
   const { q: initialQ } = Route.useSearch();
   const [q, setQ] = useState(initialQ ?? "");
   useEffect(() => { if (initialQ !== undefined) setQ(initialQ); }, [initialQ]);
