@@ -7,7 +7,8 @@
 - [x] Add moving featured products before Services and move About after Services.
 - [x] Restore /admin with a login matching the live site and compatible with static hosting; signed-in screen links to the existing live operations editor.
 - [x] Verify homepage order, carousel movement, product clicks, /admin loading and real sign-in rejection handling at desktop and mobile widths.
-- [ ] Verify successful staff sign-in and access to the live operations editor — blocked: externally managed authentication has no available test session.
+- [x] Admin page: staff sign-in, add/edit/delete products, photos and prices (saved online, shown on product pages).
+- [x] Use KHB HIV Diagnostic Test Kit photo on the site.
 - [x] Replace homepage hero photos with the supplied NewHeros collection.
 - [x] Add Categories beside the main navigation links, including mobile access.
 - [x] Sync changed website sections and actual partnership logos from the live website.
