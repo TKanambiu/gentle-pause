@@ -1,0 +1,2506 @@
+{
+  "/10L_Bedside_Oxygen_Concentrator.png": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e3f9c0fe-fc65-40c9-9b75-c7abeedd9395/10L_Bedside_Oxygen_Concentrator-480.webp",
+        "bytes": 5138
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/7ef9e638-a354-4004-bab1-71dc80386000/10L_Bedside_Oxygen_Concentrator-800.webp",
+        "bytes": 10766
+      }
+    ],
+    "originalBytes": 106503
+  },
+  "/2_Crank_ABS_Hospital_Bed.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/31cf7c6f-c797-498e-a513-49b00323d9d6/2_Crank_ABS_Hospital_Bed-480.webp",
+        "bytes": 16506
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/24890d41-f0c5-46bb-8a83-eb3a421fab81/2_Crank_ABS_Hospital_Bed-550.webp",
+        "bytes": 20164
+      }
+    ],
+    "originalBytes": 196639
+  },
+  "/3M_N95_1860.png": {
+    "width": 505,
+    "height": 505,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/b01b08f4-823b-4f49-b6a1-ced728d75023/3M_N95_1860-480.webp",
+        "bytes": 24900
+      },
+      {
+        "width": 505,
+        "url": "/__l5e/assets-v1/04aacede-7673-4b34-b04f-0819f6d76435/3M_N95_1860-505.webp",
+        "bytes": 27238
+      }
+    ],
+    "originalBytes": 293778
+  },
+  "/3M_N95_8210.png": {
+    "width": 505,
+    "height": 505,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/7cf63c1b-28a7-4b30-b4a6-2ed3cc3c532a/3M_N95_8210-480.webp",
+        "bytes": 10324
+      },
+      {
+        "width": 505,
+        "url": "/__l5e/assets-v1/1968a592-5f8d-45cc-893a-0d0bc347fb1b/3M_N95_8210-505.webp",
+        "bytes": 11196
+      }
+    ],
+    "originalBytes": 135656
+  },
+  "/3_Ball_Incentive_Spirometer.png": {
+    "width": 1000,
+    "height": 1001,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/dbe8ab75-7789-41a7-ab41-9d9e456e2c6b/3_Ball_Incentive_Spirometer-480.webp",
+        "bytes": 14786
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/3096169d-cc28-44f9-84c1-4bcbc973616a/3_Ball_Incentive_Spirometer-1000.webp",
+        "bytes": 46126
+      }
+    ],
+    "originalBytes": 590563
+  },
+  "/3_Fold_Ward_Screen.png": {
+    "width": 709,
+    "height": 709,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/28d49de3-71bc-44f9-b70f-6ef84f643326/3_Fold_Ward_Screen-480.webp",
+        "bytes": 8842
+      },
+      {
+        "width": 709,
+        "url": "/__l5e/assets-v1/7afe0698-9333-4760-9ec2-783b09fb6c80/3_Fold_Ward_Screen-709.webp",
+        "bytes": 13838
+      }
+    ],
+    "originalBytes": 250823
+  },
+  "/3_Ply_Surgical_Face_Masks_Box_of_50.png": {
+    "width": 522,
+    "height": 486,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/84920620-66d2-4b11-b46b-72c48942bddc/3_Ply_Surgical_Face_Masks_Box_of_50-480.webp",
+        "bytes": 13534
+      },
+      {
+        "width": 522,
+        "url": "/__l5e/assets-v1/d6e9ce21-a52c-4a92-96fa-462e1f481e84/3_Ply_Surgical_Face_Masks_Box_of_50-522.webp",
+        "bytes": 15566
+      }
+    ],
+    "originalBytes": 214955
+  },
+  "/3_Shelf_Medicine_Trolley.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/0e56baa7-a861-458c-9758-85bb948ac300/3_Shelf_Medicine_Trolley-480.webp",
+        "bytes": 7564
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/7a001691-07e4-429e-a782-a7c2fbc2b480/3_Shelf_Medicine_Trolley-550.webp",
+        "bytes": 8988
+      }
+    ],
+    "originalBytes": 141777
+  },
+  "/4_Fold_Ward_Screen.png": {
+    "width": 680,
+    "height": 663,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/f7371cc4-b809-4b98-bb9e-428af1013b10/4_Fold_Ward_Screen-480.webp",
+        "bytes": 17086
+      },
+      {
+        "width": 680,
+        "url": "/__l5e/assets-v1/3f8a6804-059f-4919-917a-0827a93ec038/4_Fold_Ward_Screen-680.webp",
+        "bytes": 30254
+      }
+    ],
+    "originalBytes": 341752
+  },
+  "/5L_Portable_Oxygen_Concentrator.png": {
+    "width": 1300,
+    "height": 1300,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/0e29c21a-76a1-4dab-a87a-37ead10d5bd8/5L_Portable_Oxygen_Concentrator-480.webp",
+        "bytes": 7822
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/d060cb30-60af-4fa0-91ac-5f38bc8cae85/5L_Portable_Oxygen_Concentrator-1280.webp",
+        "bytes": 33244
+      }
+    ],
+    "originalBytes": 312079
+  },
+  "/5ML DISPOSABLE SYRINGE.jpg": {
+    "width": 894,
+    "height": 821,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e8d877ad-c9d3-46b4-9464-f3e41b937b07/5ML DISPOSABLE SYRINGE-480.webp",
+        "bytes": 16926
+      },
+      {
+        "width": 894,
+        "url": "/__l5e/assets-v1/c5a6f0d8-9119-4bde-a9e5-85213284b315/5ML DISPOSABLE SYRINGE-894.webp",
+        "bytes": 41014
+      }
+    ],
+    "originalBytes": 54282
+  },
+  "/7L_Portable_Oxygen_Concentrator.png": {
+    "width": 990,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/d8bd8215-f231-49ca-9bcb-fa80ffb3ad98/7L_Portable_Oxygen_Concentrator-480.webp",
+        "bytes": 11566
+      },
+      {
+        "width": 990,
+        "url": "/__l5e/assets-v1/68f433cf-d968-4533-9858-20712f905406/7L_Portable_Oxygen_Concentrator-990.webp",
+        "bytes": 28402
+      }
+    ],
+    "originalBytes": 330225
+  },
+  "/ABSORBETN GAUZE (750G).jpg": {
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/6e0bd70b-0d58-4588-a1fc-4bb4cf1dedf0/ABSORBETN GAUZE (750G)-480.webp",
+        "bytes": 7772
+      },
+      {
+        "width": 500,
+        "url": "/__l5e/assets-v1/287fd18d-56d8-42e5-9f70-5a86e10f79f8/ABSORBETN GAUZE (750G)-500.webp",
+        "bytes": 8450
+      }
+    ],
+    "originalBytes": 14571
+  },
+  "/Adult_Diapers.png": {
+    "width": 768,
+    "height": 567,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/51af9edd-d50e-45fe-924f-121e6250d4d7/Adult_Diapers-480.webp",
+        "bytes": 2188
+      },
+      {
+        "width": 768,
+        "url": "/__l5e/assets-v1/1ebf18c9-6d03-448a-a00b-e4b94e665b2a/Adult_Diapers-768.webp",
+        "bytes": 4272
+      }
+    ],
+    "originalBytes": 89551
+  },
+  "/Ambu_Bag.png": {
+    "width": 338,
+    "height": 300,
+    "variants": [
+      {
+        "width": 338,
+        "url": "/__l5e/assets-v1/812d7ec6-b1da-4491-8404-8efec30fb90d/Ambu_Bag-338.webp",
+        "bytes": 7678
+      }
+    ],
+    "originalBytes": 80914
+  },
+  "/BLOOD GIVING SET.jpg": {
+    "width": 600,
+    "height": 339,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/338663bf-e56d-4d5d-94dc-918c57361fd1/BLOOD GIVING SET-480.webp",
+        "bytes": 3172
+      },
+      {
+        "width": 600,
+        "url": "/__l5e/assets-v1/30ef4fa5-08c7-405b-a5e0-a46129186b88/BLOOD GIVING SET-600.webp",
+        "bytes": 4476
+      }
+    ],
+    "originalBytes": 7735
+  },
+  "/BLUE Nitrile-1 EXAMINATION.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/dc77c73d-875a-4bd7-9d99-7163a13381d4/BLUE Nitrile-1 EXAMINATION-480.webp",
+        "bytes": 12296
+      },
+      {
+        "width": 1080,
+        "url": "/__l5e/assets-v1/72647a2b-94b2-45bc-a47d-4cf986b7a6a7/BLUE Nitrile-1 EXAMINATION-1080.webp",
+        "bytes": 36432
+      }
+    ],
+    "originalBytes": 43636
+  },
+  "/Baby_Finger_Oximeter.png": {
+    "width": 1200,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/2e80fa01-0690-493c-82ca-43e597637d83/Baby_Finger_Oximeter-480.webp",
+        "bytes": 11876
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/10df41b3-e9d4-4d88-b13c-f8e3d301dd5d/Baby_Finger_Oximeter-1200.webp",
+        "bytes": 36648
+      }
+    ],
+    "originalBytes": 521844
+  },
+  "/Baby_Incubator.png": {
+    "width": 507,
+    "height": 338,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/389b4f83-16d0-4aaa-ad39-0d1032a79143/Baby_Incubator-480.webp",
+        "bytes": 15468
+      },
+      {
+        "width": 507,
+        "url": "/__l5e/assets-v1/1411440f-fa85-4669-bc3c-1d551c64d332/Baby_Incubator-507.webp",
+        "bytes": 16550
+      }
+    ],
+    "originalBytes": 258859
+  },
+  "/Baby_Warmer_with_Phototherapy.png": {
+    "width": 1500,
+    "height": 2000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/fcca7f3e-a5f7-4c1a-a679-1d99914e1228/Baby_Warmer_with_Phototherapy-480.webp",
+        "bytes": 28190
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/7fe7af0c-f142-492b-812c-2eba01e7a446/Baby_Warmer_with_Phototherapy-1280.webp",
+        "bytes": 89230
+      }
+    ],
+    "originalBytes": 2464364
+  },
+  "/Beard_Cover_Pack_of_100.png": {
+    "width": 379,
+    "height": 400,
+    "variants": [
+      {
+        "width": 379,
+        "url": "/__l5e/assets-v1/ad4b7d75-d23e-4cc9-8023-0c7baf5a79bc/Beard_Cover_Pack_of_100-379.webp",
+        "bytes": 5500
+      }
+    ],
+    "originalBytes": 82624
+  },
+  "/Bedside_Cabinet.png": {
+    "width": 800,
+    "height": 745,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/29148187-3316-42ef-a89f-e024e64dc54b/Bedside_Cabinet-480.webp",
+        "bytes": 9452
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/012040aa-4521-476e-82ec-e92672ba2142/Bedside_Cabinet-800.webp",
+        "bytes": 19274
+      }
+    ],
+    "originalBytes": 292780
+  },
+  "/Blood-giving-set-1.jpg": {
+    "width": 550,
+    "height": 481,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e9eb2f53-db94-448b-b979-f260a7c7a0db/Blood-giving-set-1-480.webp",
+        "bytes": 17112
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/81153cf4-2724-4a18-920f-2e204816cfe4/Blood-giving-set-1-550.webp",
+        "bytes": 22074
+      }
+    ],
+    "originalBytes": 33978
+  },
+  "/Cordless_Tunnel_BP_Machine.png": {
+    "width": 854,
+    "height": 613,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/a1860e0d-611c-4b79-8b7b-2ba21dc19c5e/Cordless_Tunnel_BP_Machine-480.webp",
+        "bytes": 22138
+      },
+      {
+        "width": 854,
+        "url": "/__l5e/assets-v1/092de49e-37bf-4514-ad2c-92230b9b7a46/Cordless_Tunnel_BP_Machine-854.webp",
+        "bytes": 66004
+      }
+    ],
+    "originalBytes": 849250
+  },
+  "/Cotton-WooL 400 G.png": {
+    "width": 1707,
+    "height": 2560,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e235b251-2cdd-4eec-ae3d-9630132fcfaf/Cotton-WooL 400 G-480.webp",
+        "bytes": 29426
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/17b4b235-54bf-4726-a405-f86d38448510/Cotton-WooL 400 G-1280.webp",
+        "bytes": 104490
+      }
+    ],
+    "originalBytes": 713048
+  },
+  "/Coverall_with_Shoe_Cover.png": {
+    "width": 750,
+    "height": 1333,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/5fec5cbe-9638-4cc7-80dc-e87e7fa05f2a/Coverall_with_Shoe_Cover-480.webp",
+        "bytes": 29054
+      },
+      {
+        "width": 750,
+        "url": "/__l5e/assets-v1/43cb1e6f-2c0b-4e4f-b66e-f03c24e93670/Coverall_with_Shoe_Cover-750.webp",
+        "bytes": 53930
+      }
+    ],
+    "originalBytes": 699573
+  },
+  "/DP_20_Mindray_Ultrasound.png": {
+    "width": 960,
+    "height": 720,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/f01d625f-fff5-454e-8844-1ca5e3ae420e/DP_20_Mindray_Ultrasound-480.webp",
+        "bytes": 7104
+      },
+      {
+        "width": 960,
+        "url": "/__l5e/assets-v1/9a95e994-6554-4e12-8495-e6517761ec63/DP_20_Mindray_Ultrasound-960.webp",
+        "bytes": 14532
+      }
+    ],
+    "originalBytes": 189430
+  },
+  "/Diagnostic_Kit.png": {
+    "width": 730,
+    "height": 730,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e9a6df12-dc54-4ca9-8757-1f3ba5d5c6ed/Diagnostic_Kit-480.webp",
+        "bytes": 8870
+      },
+      {
+        "width": 730,
+        "url": "/__l5e/assets-v1/d308db3a-9c41-457f-9d96-8ff9847de519/Diagnostic_Kit-730.webp",
+        "bytes": 17096
+      }
+    ],
+    "originalBytes": 337469
+  },
+  "/Diathermy_Machine_400W.png": {
+    "width": 2000,
+    "height": 1578,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/28bbf0fe-49e0-4c38-ad59-72bce579656e/Diathermy_Machine_400W-480.webp",
+        "bytes": 7196
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/27f94642-ad0d-4a94-ac95-94bb42dd30bd/Diathermy_Machine_400W-1280.webp",
+        "bytes": 25524
+      }
+    ],
+    "originalBytes": 409004
+  },
+  "/Digital_Baby_Scale.png": {
+    "width": 2048,
+    "height": 1536,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/d04928ca-ebbc-4d0b-8dbe-671a5e483c10/Digital_Baby_Scale-480.webp",
+        "bytes": 2702
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/11b7edef-0001-49c5-9e15-3962f2bdc0ec/Digital_Baby_Scale-1280.webp",
+        "bytes": 8434
+      }
+    ],
+    "originalBytes": 203522
+  },
+  "/Digital_Height_Weight_Scale.png": {
+    "width": 950,
+    "height": 2000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/f03adfd6-6ef0-43fb-8011-bedd8aabdad5/Digital_Height_Weight_Scale-480.webp",
+        "bytes": 8992
+      },
+      {
+        "width": 950,
+        "url": "/__l5e/assets-v1/8a6ac0c8-49cd-4418-9985-36e35662e4db/Digital_Height_Weight_Scale-950.webp",
+        "bytes": 22566
+      }
+    ],
+    "originalBytes": 336250
+  },
+  "/Digital_Thermometer.png": {
+    "width": 1000,
+    "height": 1178,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/0c1fc520-da37-4a76-8ba5-510e22bd97fa/Digital_Thermometer-480.webp",
+        "bytes": 5978
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/51992ee9-8703-4016-8a95-c35895160178/Digital_Thermometer-1000.webp",
+        "bytes": 16604
+      }
+    ],
+    "originalBytes": 219560
+  },
+  "/Disposable_Apron.png": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/715e897c-44d8-478c-b82a-f7011692eef6/Disposable_Apron-480.webp",
+        "bytes": 13302
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/c35790da-bdfd-42c8-8f5d-7eccc854bd6c/Disposable_Apron-1000.webp",
+        "bytes": 27650
+      }
+    ],
+    "originalBytes": 234656
+  },
+  "/Electronic_Lab_Centrifuge_4000RPM.png": {
+    "width": 695,
+    "height": 528,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/fec8f144-5c7c-4267-a33b-21ecbadc940e/Electronic_Lab_Centrifuge_4000RPM-480.webp",
+        "bytes": 4936
+      },
+      {
+        "width": 695,
+        "url": "/__l5e/assets-v1/3a9d5462-45f8-42eb-b40d-b2a3395d0acf/Electronic_Lab_Centrifuge_4000RPM-695.webp",
+        "bytes": 7224
+      }
+    ],
+    "originalBytes": 110592
+  },
+  "/Emergency_Trolley_Crash_Cart.png": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/752428e4-80db-4d42-b2c5-b8a00fe6afff/Emergency_Trolley_Crash_Cart-480.webp",
+        "bytes": 18282
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/a79656cf-32f5-432c-b287-6b42d769a61c/Emergency_Trolley_Crash_Cart-1000.webp",
+        "bytes": 46190
+      }
+    ],
+    "originalBytes": 534939
+  },
+  "/Extra_Large_BP_Cuff.png": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/13e7cfb2-2f9a-4e9e-8c6b-5a0ce6fd7d81/Extra_Large_BP_Cuff-480.webp",
+        "bytes": 24600
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/ab33c042-a3aa-44d3-9d9e-05c956fd9322/Extra_Large_BP_Cuff-800.webp",
+        "bytes": 51672
+      }
+    ],
+    "originalBytes": 465565
+  },
+  "/Face_Shield.png": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/4af501a3-6a44-4c79-a421-9da4f4166fe2/Face_Shield-480.webp",
+        "bytes": 5012
+      },
+      {
+        "width": 1024,
+        "url": "/__l5e/assets-v1/63cec5d1-7bcf-4627-8a13-d4d420dbc128/Face_Shield-1024.webp",
+        "bytes": 18244
+      }
+    ],
+    "originalBytes": 256648
+  },
+  "/Fetal_Doppler.png": {
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/6d297b12-cdc0-49b1-8596-0439a1868b0c/Fetal_Doppler-480.webp",
+        "bytes": 9646
+      },
+      {
+        "width": 500,
+        "url": "/__l5e/assets-v1/e46cf14e-9b48-47de-9edf-aa3bffec347b/Fetal_Doppler-500.webp",
+        "bytes": 10722
+      }
+    ],
+    "originalBytes": 119219
+  },
+  "/First_Aid_Box.png": {
+    "width": 425,
+    "height": 497,
+    "variants": [
+      {
+        "width": 425,
+        "url": "/__l5e/assets-v1/b29e31dd-e0a7-4a72-b144-c409cd054ba6/First_Aid_Box-425.webp",
+        "bytes": 12634
+      }
+    ],
+    "originalBytes": 118047
+  },
+  "/Fogging_Machine.png": {
+    "width": 1200,
+    "height": 628,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/8db5fef3-2111-4c2f-8e48-728f60a5b89f/Fogging_Machine-480.webp",
+        "bytes": 12014
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/728de4f9-ec73-4095-ae56-ee3d848f0957/Fogging_Machine-1200.webp",
+        "bytes": 34636
+      }
+    ],
+    "originalBytes": 732262
+  },
+  "/Freestyle_Libre_2_CGM.png": {
+    "width": 1500,
+    "height": 1500,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/77310d3a-2664-463c-a8fa-2a1b0a895116/Freestyle_Libre_2_CGM-480.webp",
+        "bytes": 13732
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/1138c563-2072-417f-9d56-6b739723a363/Freestyle_Libre_2_CGM-1280.webp",
+        "bytes": 61838
+      }
+    ],
+    "originalBytes": 749389
+  },
+  "/Fridge_Thermometer.png": {
+    "width": 445,
+    "height": 445,
+    "variants": [
+      {
+        "width": 445,
+        "url": "/__l5e/assets-v1/73ebbd6d-68ca-40d3-8da4-5b6defd96a54/Fridge_Thermometer-445.webp",
+        "bytes": 8552
+      }
+    ],
+    "originalBytes": 136770
+  },
+  "/Gauze_Roll_1500gms.png": {
+    "width": 750,
+    "height": 750,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/daa16a40-bd9f-4a7f-938d-0b840e3d990f/Gauze_Roll_1500gms-480.webp",
+        "bytes": 9138
+      },
+      {
+        "width": 750,
+        "url": "/__l5e/assets-v1/0913be51-d2b6-4cd2-afe9-c4b5c1ffb3dc/Gauze_Roll_1500gms-750.webp",
+        "bytes": 18662
+      }
+    ],
+    "originalBytes": 210001
+  },
+  "/Generic_BP_Machine.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/f1617370-4029-45b0-bd1d-8890a7c060f1/Generic_BP_Machine-480.webp",
+        "bytes": 25218
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/fd2187ec-aa7d-44e5-9477-7eff328f0cea/Generic_BP_Machine-550.webp",
+        "bytes": 30676
+      }
+    ],
+    "originalBytes": 281893
+  },
+  "/Gypsona_POP_4in.png": {
+    "width": 281,
+    "height": 500,
+    "variants": [
+      {
+        "width": 281,
+        "url": "/__l5e/assets-v1/248ffbad-3eca-4116-af65-da7b5871ce19/Gypsona_POP_4in-281.webp",
+        "bytes": 14174
+      }
+    ],
+    "originalBytes": 124317
+  },
+  "/Gypsona_POP_6in.png": {
+    "width": 600,
+    "height": 269,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/eb353b5a-0eef-4eed-ac18-b2fd182d8da3/Gypsona_POP_6in-480.webp",
+        "bytes": 8222
+      },
+      {
+        "width": 600,
+        "url": "/__l5e/assets-v1/83d4af83-c9fd-424c-bc08-a83ebc535988/Gypsona_POP_6in-600.webp",
+        "bytes": 12956
+      }
+    ],
+    "originalBytes": 129017
+  },
+  "/Gypsona_POP_8in.png": {
+    "width": 1000,
+    "height": 562,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/f228063a-fb29-42fc-973c-9fb2fc77deed/Gypsona_POP_8in-480.webp",
+        "bytes": 14412
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/39a7777e-a683-4434-8f9e-9922c5faa982/Gypsona_POP_8in-1000.webp",
+        "bytes": 31654
+      }
+    ],
+    "originalBytes": 422395
+  },
+  "/Hairnet_Head_Cap.png": {
+    "width": 750,
+    "height": 750,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/d1fa4db4-849b-4936-9371-10f75023feaa/Hairnet_Head_Cap-480.webp",
+        "bytes": 18378
+      },
+      {
+        "width": 750,
+        "url": "/__l5e/assets-v1/15aa79f7-d1c5-4e45-81ae-f81c51020489/Hairnet_Head_Cap-750.webp",
+        "bytes": 41818
+      }
+    ],
+    "originalBytes": 522131
+  },
+  "/Handheld_Oximeter.png": {
+    "width": 1280,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/bb0d24a8-164f-4fd7-a487-ec7687105bed/Handheld_Oximeter-480.webp",
+        "bytes": 8348
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/23531841-f8c3-430c-b309-ab87aa69029e/Handheld_Oximeter-1280.webp",
+        "bytes": 40260
+      }
+    ],
+    "originalBytes": 1522663
+  },
+  "/Hematology_Analyzer_DH31_with_Reagents.png": {
+    "width": 750,
+    "height": 750,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/01804929-64f0-4c6d-9ff5-66ac4e94cfaa/Hematology_Analyzer_DH31_with_Reagents-480.webp",
+        "bytes": 5148
+      },
+      {
+        "width": 750,
+        "url": "/__l5e/assets-v1/b7cb8d65-8c1c-43fa-b294-be40b275b570/Hematology_Analyzer_DH31_with_Reagents-750.webp",
+        "bytes": 8112
+      }
+    ],
+    "originalBytes": 101990
+  },
+  "/Hemocue_301_Machine.png": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/b1175075-183d-4d1a-9c7f-9a7df6978863/Hemocue_301_Machine-480.webp",
+        "bytes": 15322
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/6496bafc-ca8a-4cfe-af9d-b5efbf421a5b/Hemocue_301_Machine-800.webp",
+        "bytes": 27932
+      }
+    ],
+    "originalBytes": 386860
+  },
+  "/Hemocue_Microcuvettes.png": {
+    "width": 1500,
+    "height": 1500,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/75d2357e-807d-48ff-aaa6-9a70e7e61de3/Hemocue_Microcuvettes-480.webp",
+        "bytes": 29656
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/a638e9b0-844b-4274-921f-0370aba842f4/Hemocue_Microcuvettes-1280.webp",
+        "bytes": 133726
+      }
+    ],
+    "originalBytes": 1322561
+  },
+  "/Humidifier_Bottle.png": {
+    "width": 1920,
+    "height": 1920,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/2c50e8c9-8a77-4d56-9e8b-0333b05d4121/Humidifier_Bottle-480.webp",
+        "bytes": 9892
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/6737c59a-c540-47a3-a535-5e2bdef6a799/Humidifier_Bottle-1280.webp",
+        "bytes": 33000
+      }
+    ],
+    "originalBytes": 996604
+  },
+  "/IV183_1.webp": {
+    "width": 1200,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/3d394e52-a11f-4190-a1ab-61c4c3e57c2b/IV183_1-480.webp",
+        "bytes": 3384
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/397492e4-9c24-4482-83e7-cf78e45c8656/IV183_1-1200.webp",
+        "bytes": 11960
+      }
+    ],
+    "originalBytes": 13734
+  },
+  "/Infrared_Thermometer.png": {
+    "width": 1000,
+    "height": 1178,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/f7d246f7-90bf-438c-b112-c598798eb8d7/Infrared_Thermometer-480.webp",
+        "bytes": 5978
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/e2ae8485-9565-4903-9a11-920bc06bb82c/Infrared_Thermometer-1000.webp",
+        "bytes": 16604
+      }
+    ],
+    "originalBytes": 219560
+  },
+  "/KHB HIV Diagnostic Test Kit.png": {
+    "width": 1254,
+    "height": 1254,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/45d64a61-0fb1-4a94-8c06-072fa7644e2c/KHB HIV Diagnostic Test Kit-480.webp",
+        "bytes": 24370
+      },
+      {
+        "width": 1254,
+        "url": "/__l5e/assets-v1/adfb1f09-3fdc-4714-bc51-243dfc8cbf05/KHB HIV Diagnostic Test Kit-1254.webp",
+        "bytes": 92594
+      }
+    ],
+    "originalBytes": 1658127
+  },
+  "/KN95_Mask_With_Valve.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/07cb9c7e-1882-4081-8f48-07813a701dc9/KN95_Mask_With_Valve-480.webp",
+        "bytes": 16914
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/15ed3e0f-03e0-4f37-a4f7-0da186c33868/KN95_Mask_With_Valve-550.webp",
+        "bytes": 21494
+      }
+    ],
+    "originalBytes": 209425
+  },
+  "/KN95_Mask_Without_Valve.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/ebdbcb48-ced5-4710-be67-bdc5cad35dd7/KN95_Mask_Without_Valve-480.webp",
+        "bytes": 16336
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/64379383-e557-4eb5-bcf3-d3e884bac8f0/KN95_Mask_Without_Valve-550.webp",
+        "bytes": 20712
+      }
+    ],
+    "originalBytes": 290755
+  },
+  "/KY-JELLY-.jpg": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/88eefcb8-b663-4569-9c1c-afccd44bd5d5/KY-JELLY--480.webp",
+        "bytes": 24548
+      },
+      {
+        "width": 600,
+        "url": "/__l5e/assets-v1/5ddb30f8-e65c-4f2c-9beb-42e2255b7d43/KY-JELLY--600.webp",
+        "bytes": 35740
+      }
+    ],
+    "originalBytes": 87359
+  },
+  "/LED_Adjustable_Examination_Lamp.png": {
+    "width": 1635,
+    "height": 3450,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/82779f44-c3ab-4a30-815a-969b4f3cd2f6/LED_Adjustable_Examination_Lamp-480.webp",
+        "bytes": 7122
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/4fdcc9e0-4e56-431a-887a-db313cd13d51/LED_Adjustable_Examination_Lamp-1280.webp",
+        "bytes": 26896
+      }
+    ],
+    "originalBytes": 531182
+  },
+  "/Lab_Incubator.png": {
+    "width": 450,
+    "height": 450,
+    "variants": [
+      {
+        "width": 450,
+        "url": "/__l5e/assets-v1/b104d0be-79b4-493e-a8c8-4ccd428985fe/Lab_Incubator-450.webp",
+        "bytes": 13310
+      }
+    ],
+    "originalBytes": 217388
+  },
+  "/Latex_Powder_Free_Gloves.png": {
+    "width": 1500,
+    "height": 1500,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/28803d9c-00a5-4318-a411-fa138f077820/Latex_Powder_Free_Gloves-480.webp",
+        "bytes": 13936
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/f554b377-5533-4d07-9453-b3cfc2dd6d31/Latex_Powder_Free_Gloves-1280.webp",
+        "bytes": 45196
+      }
+    ],
+    "originalBytes": 682636
+  },
+  "/Latex_Powdered_Gloves.png": {
+    "width": 932,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/3485bed4-a437-4d2b-b902-70a1a9374033/Latex_Powdered_Gloves-480.webp",
+        "bytes": 17576
+      },
+      {
+        "width": 932,
+        "url": "/__l5e/assets-v1/4b1e4dd7-d701-4447-82b0-7aa6d7ff2faf/Latex_Powdered_Gloves-932.webp",
+        "bytes": 45802
+      }
+    ],
+    "originalBytes": 457661
+  },
+  "/MOWELL I.V. CANNULA 20G, Color - Pink I.D.webp": {
+    "width": 480,
+    "height": 264,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/797cbd51-a65e-4644-999d-392cbe435ed3/MOWELL I.V. CANNULA 20G, Color - Pink I.D-480.webp",
+        "bytes": 3430
+      }
+    ],
+    "originalBytes": 5484
+  },
+  "/MUAC_Tape.png": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/fb5ec7f3-89a4-4837-8532-a65111f097c2/MUAC_Tape-480.webp",
+        "bytes": 6906
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/8f97c781-3f16-4092-aa4f-04541e156b40/MUAC_Tape-1200.webp",
+        "bytes": 34028
+      }
+    ],
+    "originalBytes": 441626
+  },
+  "/Medical_Crocs_Clogs.png": {
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/c33b27cb-eae2-48f4-a00f-fc467d961d2a/Medical_Crocs_Clogs-480.webp",
+        "bytes": 7670
+      },
+      {
+        "width": 500,
+        "url": "/__l5e/assets-v1/5bc4bea2-e19c-43e9-80ac-0f4d9f2fa659/Medical_Crocs_Clogs-500.webp",
+        "bytes": 8298
+      }
+    ],
+    "originalBytes": 84606
+  },
+  "/Medical_Gumboots.png": {
+    "width": 1200,
+    "height": 982,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/d1d6f42d-6a64-4599-936e-21bcb7d867dd/Medical_Gumboots-480.webp",
+        "bytes": 3708
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/c9ae4acc-133f-4420-96ce-bea8a056046f/Medical_Gumboots-1200.webp",
+        "bytes": 12954
+      }
+    ],
+    "originalBytes": 188729
+  },
+  "/Medicine_Trolley.png": {
+    "width": 800,
+    "height": 745,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/d00d5b5a-444d-4a17-9d69-91244eaeb5af/Medicine_Trolley-480.webp",
+        "bytes": 9728
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/ee2485e1-cfbc-47b4-909b-c29c818013c9/Medicine_Trolley-800.webp",
+        "bytes": 19540
+      }
+    ],
+    "originalBytes": 200877
+  },
+  "/Microscope_X701.png": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/0ebbbd46-c4c8-4852-b691-032bab2c05a7/Microscope_X701-480.webp",
+        "bytes": 10956
+      },
+      {
+        "width": 600,
+        "url": "/__l5e/assets-v1/4bfce2df-8565-4304-8f77-89bbb1be2b06/Microscope_X701-600.webp",
+        "bytes": 13410
+      }
+    ],
+    "originalBytes": 222615
+  },
+  "/Multi_use_Biohazard_Spill_Kit.png": {
+    "width": 952,
+    "height": 952,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/84f04258-efa3-4523-82de-93d60fc0066c/Multi_use_Biohazard_Spill_Kit-480.webp",
+        "bytes": 25228
+      },
+      {
+        "width": 952,
+        "url": "/__l5e/assets-v1/2eead1aa-7be8-4e1a-ab17-66a6228b7b27/Multi_use_Biohazard_Spill_Kit-952.webp",
+        "bytes": 74852
+      }
+    ],
+    "originalBytes": 719178
+  },
+  "/Nebulizer_Compressor.png": {
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/42ab0242-41aa-4a8d-b9b2-2b98f5b3a658/Nebulizer_Compressor-480.webp",
+        "bytes": 9412
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/865cd1ea-0c69-4c63-8caa-01d244914c01/Nebulizer_Compressor-1280.webp",
+        "bytes": 35626
+      }
+    ],
+    "originalBytes": 796221
+  },
+  "/Nitrile_Gloves.png": {
+    "width": 1200,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/320b5931-6cd3-4225-a6b7-79e68050937c/Nitrile_Gloves-480.webp",
+        "bytes": 12646
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/a93ce650-297b-4e9e-8d76-24c815fd2511/Nitrile_Gloves-1200.webp",
+        "bytes": 47734
+      }
+    ],
+    "originalBytes": 722755
+  },
+  "/Nurse_Watch.png": {
+    "width": 879,
+    "height": 900,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/99096af1-4c2e-440b-ab5f-7f53367a8f74/Nurse_Watch-480.webp",
+        "bytes": 23472
+      },
+      {
+        "width": 879,
+        "url": "/__l5e/assets-v1/641b8bed-32e9-4a94-bb1b-bdaeb433f9d3/Nurse_Watch-879.webp",
+        "bytes": 53990
+      }
+    ],
+    "originalBytes": 581255
+  },
+  "/Olympus_Microscope_CX23.png": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e13a10b7-7faf-434f-9101-8f176e14ccf6/Olympus_Microscope_CX23-480.webp",
+        "bytes": 10956
+      },
+      {
+        "width": 600,
+        "url": "/__l5e/assets-v1/3aec3eed-5c45-4880-8af7-c2962905a55f/Olympus_Microscope_CX23-600.webp",
+        "bytes": 13410
+      }
+    ],
+    "originalBytes": 222615
+  },
+  "/Omnipaque_Contrast_Medium.png": {
+    "width": 450,
+    "height": 450,
+    "variants": [
+      {
+        "width": 450,
+        "url": "/__l5e/assets-v1/26b846b7-a7e3-4064-b980-4b7079ff499c/Omnipaque_Contrast_Medium-450.webp",
+        "bytes": 15316
+      }
+    ],
+    "originalBytes": 146363
+  },
+  "/Omron_M1_BP_Machine.png": {
+    "width": 1200,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/5f0c47e0-0cb2-4335-a623-9e15c465b256/Omron_M1_BP_Machine-480.webp",
+        "bytes": 11356
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/c560126b-9f43-4f10-a743-e867148c7e3d/Omron_M1_BP_Machine-1200.webp",
+        "bytes": 38202
+      }
+    ],
+    "originalBytes": 471655
+  },
+  "/Omron_M2_BP_Machine.png": {
+    "width": 1200,
+    "height": 1200,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e2b7aeab-a0fc-4af1-88c0-aa3ac6a333ff/Omron_M2_BP_Machine-480.webp",
+        "bytes": 11356
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/9e59a76d-b6ea-4189-bbb9-28f113b0e7f7/Omron_M2_BP_Machine-1200.webp",
+        "bytes": 38202
+      }
+    ],
+    "originalBytes": 471655
+  },
+  "/On_Call_Glucometer.png": {
+    "width": 926,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/1659c695-d9e4-4c67-af9a-a4f7984f33dd/On_Call_Glucometer-480.webp",
+        "bytes": 23322
+      },
+      {
+        "width": 926,
+        "url": "/__l5e/assets-v1/6dcd94cb-5ce5-415d-874a-3ba630fb30ec/On_Call_Glucometer-926.webp",
+        "bytes": 57782
+      }
+    ],
+    "originalBytes": 591506
+  },
+  "/On_Call_Strips.png": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/793f4c36-8a76-419c-a95f-336649dc097d/On_Call_Strips-480.webp",
+        "bytes": 16906
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/ee3318dd-1ecc-4b05-a985-0496751b0d26/On_Call_Strips-1000.webp",
+        "bytes": 53782
+      }
+    ],
+    "originalBytes": 547490
+  },
+  "/Orthopedic_Padding_6in.png": {
+    "width": 1000,
+    "height": 898,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/0928ab4d-eabc-423f-ba17-9872f8a8021c/Orthopedic_Padding_6in-480.webp",
+        "bytes": 20892
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/ee8bb165-f3e7-49c5-8c6c-6079a2baea11/Orthopedic_Padding_6in-1000.webp",
+        "bytes": 54348
+      }
+    ],
+    "originalBytes": 614537
+  },
+  "/Orthopedic_Padding_8in.png": {
+    "width": 750,
+    "height": 750,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/ccf28c76-8e6a-4853-b6ef-3356adee8fe8/Orthopedic_Padding_8in-480.webp",
+        "bytes": 9138
+      },
+      {
+        "width": 750,
+        "url": "/__l5e/assets-v1/9e147194-edc6-4a40-8308-67c5fc34f344/Orthopedic_Padding_8in-750.webp",
+        "bytes": 18662
+      }
+    ],
+    "originalBytes": 210001
+  },
+  "/Oxygen_Cylinder_1.36m3.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/4d9d0a14-5f0e-44a7-813d-a9370ab9a796/Oxygen_Cylinder_1.36m3-480.webp",
+        "bytes": 11640
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/a5efd8ba-e0ec-4780-86ed-237d1e1391ab/Oxygen_Cylinder_1.36m3-550.webp",
+        "bytes": 13960
+      }
+    ],
+    "originalBytes": 139239
+  },
+  "/Oxygen_Cylinder_3.4m3.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/92a21ed0-46cc-4163-ac25-73b4740c3c90/Oxygen_Cylinder_3.4m3-480.webp",
+        "bytes": 11640
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/38a52aec-49ba-4e1e-a698-3c928d7c7e33/Oxygen_Cylinder_3.4m3-550.webp",
+        "bytes": 13960
+      }
+    ],
+    "originalBytes": 139239
+  },
+  "/Oxygen_Cylinder_7.0m3.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/838ac73f-e76c-4036-a64b-830657dfd88a/Oxygen_Cylinder_7.0m3-480.webp",
+        "bytes": 11640
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/4b056766-b133-4093-95e0-89bf6c3099c1/Oxygen_Cylinder_7.0m3-550.webp",
+        "bytes": 13960
+      }
+    ],
+    "originalBytes": 139239
+  },
+  "/Oxygen_Cylinder_8.5m3.png": {
+    "width": 550,
+    "height": 550,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/1aeffcfd-ade7-4b57-85cd-6bb557e63876/Oxygen_Cylinder_8.5m3-480.webp",
+        "bytes": 11640
+      },
+      {
+        "width": 550,
+        "url": "/__l5e/assets-v1/aac3b02c-726b-4184-b40a-6b4ccdc51bef/Oxygen_Cylinder_8.5m3-550.webp",
+        "bytes": 13960
+      }
+    ],
+    "originalBytes": 139239
+  },
+  "/Oxygen_Mask.png": {
+    "width": 750,
+    "height": 750,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/bc630212-2e34-4906-8c58-b303c6e97787/Oxygen_Mask-480.webp",
+        "bytes": 13226
+      },
+      {
+        "width": 750,
+        "url": "/__l5e/assets-v1/881fff98-5fc8-46bf-8f2d-e8a2962ba1d0/Oxygen_Mask-750.webp",
+        "bytes": 23656
+      }
+    ],
+    "originalBytes": 333261
+  },
+  "/Oxygen_Regulator.png": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/70e77c19-a68f-4628-9139-890ed6345684/Oxygen_Regulator-480.webp",
+        "bytes": 23958
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/56889f19-c00f-444d-bf44-88b4107fb7aa/Oxygen_Regulator-1000.webp",
+        "bytes": 68482
+      }
+    ],
+    "originalBytes": 640958
+  },
+  "/Pill_Organizer.png": {
+    "width": 850,
+    "height": 824,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/65a46ce7-ddfd-477d-82af-662a92268b58/Pill_Organizer-480.webp",
+        "bytes": 17566
+      },
+      {
+        "width": 850,
+        "url": "/__l5e/assets-v1/4d6c586e-4359-45de-a3ef-9053e9e27d1e/Pill_Organizer-850.webp",
+        "bytes": 39288
+      }
+    ],
+    "originalBytes": 557152
+  },
+  "/Plaster_Cutter.png": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/528dcb38-7ba2-4c38-820f-5bd127ffaf7f/Plaster_Cutter-480.webp",
+        "bytes": 7104
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/23c8e0a0-0f4c-40fb-a41f-2999dc3e0bdb/Plaster_Cutter-1000.webp",
+        "bytes": 17626
+      }
+    ],
+    "originalBytes": 267761
+  },
+  "/Ripple_Mattress.png": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/64005b04-74bc-4149-974d-69f5151d3e2e/Ripple_Mattress-480.webp",
+        "bytes": 10404
+      },
+      {
+        "width": 1024,
+        "url": "/__l5e/assets-v1/8747d1ba-3ce5-4f82-a472-9eb79b46cded/Ripple_Mattress-1024.webp",
+        "bytes": 22584
+      }
+    ],
+    "originalBytes": 394017
+  },
+  "/Safety_Boots.png": {
+    "width": 1000,
+    "height": 1245,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/ccecb076-efef-4905-8127-76a92d4e9944/Safety_Boots-480.webp",
+        "bytes": 5372
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/31e7be4e-67ab-4c19-b55a-f7fa97ce519d/Safety_Boots-1000.webp",
+        "bytes": 15118
+      }
+    ],
+    "originalBytes": 227488
+  },
+  "/Safety_Goggles.png": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/a66e4fe8-6299-48ca-8af2-11ba5b322d99/Safety_Goggles-480.webp",
+        "bytes": 9488
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/8038de6b-9e40-43d5-932d-ae7d61a4d00a/Safety_Goggles-800.webp",
+        "bytes": 17638
+      }
+    ],
+    "originalBytes": 251016
+  },
+  "/Sanitary_Bin.png": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/745a4dab-1dc9-449d-8508-59578b740ac1/Sanitary_Bin-480.webp",
+        "bytes": 10486
+      },
+      {
+        "width": 600,
+        "url": "/__l5e/assets-v1/1551d75b-e00f-448d-ae63-d17cece402a1/Sanitary_Bin-600.webp",
+        "bytes": 18418
+      }
+    ],
+    "originalBytes": 205323
+  },
+  "/Sibionic_Continuous_Glucose_Monitor.png": {
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/85651863-87e1-4eb0-a601-e99f319f3201/Sibionic_Continuous_Glucose_Monitor-480.webp",
+        "bytes": 12622
+      },
+      {
+        "width": 1024,
+        "url": "/__l5e/assets-v1/db088c6b-5360-416a-aa40-346b576915c8/Sibionic_Continuous_Glucose_Monitor-1024.webp",
+        "bytes": 34518
+      }
+    ],
+    "originalBytes": 317719
+  },
+  "/Single_X_Ray_Viewer.png": {
+    "width": 1467,
+    "height": 1685,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/62c9fa5c-10aa-4bb6-82ff-e477019e1a74/Single_X_Ray_Viewer-480.webp",
+        "bytes": 7572
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/9e173b4f-445a-44a6-9795-e37b416142be/Single_X_Ray_Viewer-1280.webp",
+        "bytes": 25488
+      }
+    ],
+    "originalBytes": 317116
+  },
+  "/Sterile_Gloves.png": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/add6ee24-a062-4cbe-811f-e74557631250/Sterile_Gloves-480.webp",
+        "bytes": 15824
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/d9719d28-9ca3-4168-a47b-9a74e9b55478/Sterile_Gloves-800.webp",
+        "bytes": 33056
+      }
+    ],
+    "originalBytes": 431034
+  },
+  "/Stool_Container.png": {
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/48b8e7a5-5279-4449-b6b3-b0b9481f34cb/Stool_Container-480.webp",
+        "bytes": 5126
+      },
+      {
+        "width": 500,
+        "url": "/__l5e/assets-v1/afec4c02-f001-4e29-b3d5-08a2eda1e7c3/Stool_Container-500.webp",
+        "bytes": 5800
+      }
+    ],
+    "originalBytes": 74225
+  },
+  "/Surgical-Spirit-70-5L-front-view-1-scaled.jpg": {
+    "width": 1707,
+    "height": 2560,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/49741626-ed3d-49d2-be8b-af2851989251/Surgical-Spirit-70-5L-front-view-1-scaled-480.webp",
+        "bytes": 8874
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/dd402d60-86e4-4c1a-aaf3-8adf7112cb8d/Surgical-Spirit-70-5L-front-view-1-scaled-1280.webp",
+        "bytes": 39484
+      }
+    ],
+    "originalBytes": 88396
+  },
+  "/Temperature_Hygrometer.png": {
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/dd8babeb-317e-4198-ae86-8f0a3e8f1b54/Temperature_Hygrometer-480.webp",
+        "bytes": 12140
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/7ee4cee8-046c-4cc8-a159-413a3fc7edb1/Temperature_Hygrometer-800.webp",
+        "bytes": 21972
+      }
+    ],
+    "originalBytes": 199951
+  },
+  "/Tourniquet.png": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/dba9a481-b743-4c1e-9a2d-a0e9748d7f31/Tourniquet-480.webp",
+        "bytes": 15004
+      },
+      {
+        "width": 1000,
+        "url": "/__l5e/assets-v1/f1c4c0b7-5ab7-4869-a299-035c7cbfc714/Tourniquet-1000.webp",
+        "bytes": 65358
+      }
+    ],
+    "originalBytes": 588037
+  },
+  "/UPP_110HG_X_Ray_Thermal_Paper.png": {
+    "width": 500,
+    "height": 549,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/bde986d5-3101-4a2e-81c2-f97c41cc5506/UPP_110HG_X_Ray_Thermal_Paper-480.webp",
+        "bytes": 3286
+      },
+      {
+        "width": 500,
+        "url": "/__l5e/assets-v1/82ce0a99-87d1-49e5-aacd-ea8b25bf6b4b/UPP_110HG_X_Ray_Thermal_Paper-500.webp",
+        "bytes": 3536
+      }
+    ],
+    "originalBytes": 40336
+  },
+  "/Ultrasound_Gel.png": {
+    "width": 2276,
+    "height": 2560,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/0e2decfb-8214-4b1a-8dd4-e9151e66db19/Ultrasound_Gel-480.webp",
+        "bytes": 13238
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/a2f1e7df-e7cc-4d3d-90fd-9ff2a1f16a30/Ultrasound_Gel-1280.webp",
+        "bytes": 51444
+      }
+    ],
+    "originalBytes": 1308060
+  },
+  "/VINNO_A3_Color_Doppler_Ultrasound.png": {
+    "width": 960,
+    "height": 720,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/3ad58904-2b6c-442a-a363-df2d96966123/VINNO_A3_Color_Doppler_Ultrasound-480.webp",
+        "bytes": 7104
+      },
+      {
+        "width": 960,
+        "url": "/__l5e/assets-v1/59c3bd97-07fa-473a-a868-433a1b80a063/VINNO_A3_Color_Doppler_Ultrasound-960.webp",
+        "bytes": 14532
+      }
+    ],
+    "originalBytes": 189430
+  },
+  "/Vacutainer_Tubes_Red_Yellow_Purple.png": {
+    "width": 748,
+    "height": 400,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/10e22fda-087f-4f83-997c-5fee65d4d78c/Vacutainer_Tubes_Red_Yellow_Purple-480.webp",
+        "bytes": 20126
+      },
+      {
+        "width": 748,
+        "url": "/__l5e/assets-v1/aa35f512-83b9-41d6-989f-9d3266923325/Vacutainer_Tubes_Red_Yellow_Purple-748.webp",
+        "bytes": 43084
+      }
+    ],
+    "originalBytes": 448557
+  },
+  "/Vein_Finder.png": {
+    "width": 1601,
+    "height": 1601,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/4dbfab8e-10b1-4787-9ec3-d43bc5535a30/Vein_Finder-480.webp",
+        "bytes": 11366
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/6cca34c8-ae68-4522-9804-86086f01d1ce/Vein_Finder-1280.webp",
+        "bytes": 37832
+      }
+    ],
+    "originalBytes": 918944
+  },
+  "/White_Body_Bag_220x90.png": {
+    "width": 600,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/bba5d950-0289-4917-8529-97ffebf9a55b/White_Body_Bag_220x90-480.webp",
+        "bytes": 10856
+      },
+      {
+        "width": 600,
+        "url": "/__l5e/assets-v1/7ebab608-e46a-4312-9dc1-17c7a1f3613d/White_Body_Bag_220x90-600.webp",
+        "bytes": 16396
+      }
+    ],
+    "originalBytes": 236370
+  },
+  "/Yuwell Blood Pressure Monitor Set.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/40075158-c9ca-4a06-8c06-a9fe8a6ca50d/Yuwell Blood Pressure Monitor Set-480.webp",
+        "bytes": 11768
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/7db4c081-3a73-455c-8137-f3a7d08fda8d/Yuwell Blood Pressure Monitor Set-1280.webp",
+        "bytes": 62288
+      }
+    ],
+    "originalBytes": 1822815
+  },
+  "/Yuwell_Rechargeable_BP_Machine.png": {
+    "width": 916,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/1f49c44e-8b5a-4cab-ab50-c0145514984f/Yuwell_Rechargeable_BP_Machine-480.webp",
+        "bytes": 15576
+      },
+      {
+        "width": 916,
+        "url": "/__l5e/assets-v1/1ed71be4-2cf3-4481-93f5-0686fe6b47ea/Yuwell_Rechargeable_BP_Machine-916.webp",
+        "bytes": 61500
+      }
+    ],
+    "originalBytes": 501645
+  },
+  "/avatar-man-1.webp": {
+    "width": 256,
+    "height": 256,
+    "variants": [
+      {
+        "width": 256,
+        "url": "/__l5e/assets-v1/bdf28efe-ba78-4f65-b00a-abf17b151896/avatar-man-1-256.webp",
+        "bytes": 4552
+      }
+    ],
+    "originalBytes": 6044
+  },
+  "/avatar-man-2.webp": {
+    "width": 88,
+    "height": 127,
+    "variants": [
+      {
+        "width": 88,
+        "url": "/__l5e/assets-v1/95c543d0-67c7-465f-aea1-91c3fa9a7612/avatar-man-2-88.webp",
+        "bytes": 1656
+      }
+    ],
+    "originalBytes": 2164
+  },
+  "/avatar-woman-1.webp": {
+    "width": 256,
+    "height": 256,
+    "variants": [
+      {
+        "width": 256,
+        "url": "/__l5e/assets-v1/62d00dba-cf1f-4eae-b29a-2c85af503781/avatar-woman-1-256.webp",
+        "bytes": 4304
+      }
+    ],
+    "originalBytes": 5682
+  },
+  "/avatar-woman-2.webp": {
+    "width": 93,
+    "height": 112,
+    "variants": [
+      {
+        "width": 93,
+        "url": "/__l5e/assets-v1/51eb3e1d-a0c6-4f92-87e9-8e6249052897/avatar-woman-2-93.webp",
+        "bytes": 1772
+      }
+    ],
+    "originalBytes": 2362
+  },
+  "/avatar-woman-3.webp": {
+    "width": 111,
+    "height": 147,
+    "variants": [
+      {
+        "width": 111,
+        "url": "/__l5e/assets-v1/5a767d07-532e-4868-95f6-541fa30d900b/avatar-woman-3-111.webp",
+        "bytes": 2492
+      }
+    ],
+    "originalBytes": 3300
+  },
+  "/cat-furniture.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/a09110f8-e479-4fd0-917e-80641ea257c4/cat-furniture-480.webp",
+        "bytes": 16820
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/ff979f17-08d3-4bcf-b5b6-905f75da06b5/cat-furniture-800.webp",
+        "bytes": 39800
+      }
+    ],
+    "originalBytes": 53068
+  },
+  "/cat-imaging.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/ec40f874-3a1a-4172-a41a-1f01c6f943f6/cat-imaging-480.webp",
+        "bytes": 14200
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/07d19ab6-6854-460b-9989-236c5b368e7c/cat-imaging-800.webp",
+        "bytes": 25086
+      }
+    ],
+    "originalBytes": 42456
+  },
+  "/cat-lab.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/80f54f9b-f2ff-4320-a23a-eac8476e4710/cat-lab-480.webp",
+        "bytes": 12314
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/b60af19b-419e-4983-86ad-d40e7bdb1062/cat-lab-800.webp",
+        "bytes": 23712
+      }
+    ],
+    "originalBytes": 38741
+  },
+  "/cat-monitor.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/97e9fb03-3eef-4c9c-a066-94ae00b764f7/cat-monitor-480.webp",
+        "bytes": 13758
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/f1a585ec-c4d8-4c95-87a3-175435806e8d/cat-monitor-800.webp",
+        "bytes": 29838
+      }
+    ],
+    "originalBytes": 43301
+  },
+  "/cat-neonatal (1).jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/aa37676d-895c-47d1-ae8f-c9d4b5512dc1/cat-neonatal (1)-480.webp",
+        "bytes": 13428
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/34ae5f90-e635-47cb-9720-fdb0e0c3a5df/cat-neonatal (1)-800.webp",
+        "bytes": 26922
+      }
+    ],
+    "originalBytes": 42143
+  },
+  "/cat-neonatal.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/996b8d3c-793a-4b10-9b1c-016bfe13badd/cat-neonatal-480.webp",
+        "bytes": 13428
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/bbb4fbd2-266e-4594-b83d-4026d610ef4f/cat-neonatal-800.webp",
+        "bytes": 26922
+      }
+    ],
+    "originalBytes": 42143
+  },
+  "/cat-oxygen.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/35a123e6-05ad-4f48-b2a9-c482d43054c7/cat-oxygen-480.webp",
+        "bytes": 6704
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/0aa8610d-7cbe-483b-8ad7-578ffcc97e2e/cat-oxygen-800.webp",
+        "bytes": 14320
+      }
+    ],
+    "originalBytes": 26313
+  },
+  "/cat-ppe.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/4a7c64a5-dc75-488f-b3be-304eb424cfe6/cat-ppe-480.webp",
+        "bytes": 19716
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/fe57bd9f-fed6-4913-9c96-ab7f10bf866a/cat-ppe-800.webp",
+        "bytes": 38530
+      }
+    ],
+    "originalBytes": 52638
+  },
+  "/cat-theater.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/420c4b16-07b5-468d-8328-2ebb9f0fc370/cat-theater-480.webp",
+        "bytes": 20304
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/405ebfd3-72d6-4850-a3d9-f1065a86ff05/cat-theater-800.webp",
+        "bytes": 45742
+      }
+    ],
+    "originalBytes": 56969
+  },
+  "/cat-wound.jpg": {
+    "width": 800,
+    "height": 600,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/4465b7e7-fc1b-4a7f-b7ad-940f8c6af9b2/cat-wound-480.webp",
+        "bytes": 4558
+      },
+      {
+        "width": 800,
+        "url": "/__l5e/assets-v1/568e9715-a026-4f9f-9a89-969c89167d83/cat-wound-800.webp",
+        "bytes": 9256
+      }
+    ],
+    "originalBytes": 21540
+  },
+  "/hero 2.png": {
+    "width": 445,
+    "height": 466,
+    "variants": [
+      {
+        "width": 445,
+        "url": "/__l5e/assets-v1/60e2de75-04c1-4d83-bdf5-0c5b8fbfc6c7/hero 2-445.webp",
+        "bytes": 8522
+      }
+    ],
+    "originalBytes": 78836
+  },
+  "/hero 3.png": {
+    "width": 946,
+    "height": 721,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/0c74008b-c9d8-4d60-bbe5-8577c1f90e14/hero 3-480.webp",
+        "bytes": 17178
+      },
+      {
+        "width": 946,
+        "url": "/__l5e/assets-v1/9faec497-fb19-40ca-96a3-3863e5b3945c/hero 3-946.webp",
+        "bytes": 46852
+      }
+    ],
+    "originalBytes": 173988
+  },
+  "/hero1.png": {
+    "width": 406,
+    "height": 483,
+    "variants": [
+      {
+        "width": 406,
+        "url": "/__l5e/assets-v1/047a284d-0f74-4162-88ce-f733266422fc/hero1-406.webp",
+        "bytes": 8392
+      }
+    ],
+    "originalBytes": 86369
+  },
+  "/hero1.webp": {
+    "width": 1933,
+    "height": 813,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/358223ad-77ca-46e7-8393-7f8180af3acc/hero1-480.webp",
+        "bytes": 3454
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/5a4e94d9-c485-4482-95a2-af38f7e5d323/hero1-1280.webp",
+        "bytes": 14526
+      }
+    ],
+    "originalBytes": 29912
+  },
+  "/hero2.webp": {
+    "width": 1942,
+    "height": 809,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/3314e468-20c0-422e-a629-2c208981ed8a/hero2-480.webp",
+        "bytes": 3332
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/e99515c3-5ffc-4ce4-802e-e239a3f529fc/hero2-1280.webp",
+        "bytes": 13142
+      }
+    ],
+    "originalBytes": 24734
+  },
+  "/hero3.webp": {
+    "width": 1920,
+    "height": 800,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/19536c9b-4a95-4630-b298-776965990d3e/hero3-480.webp",
+        "bytes": 6372
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/3ed158ed-8ce6-42e8-9f22-976909c4bfbf/hero3-1280.webp",
+        "bytes": 21858
+      }
+    ],
+    "originalBytes": 41128
+  },
+  "/hero4.webp": {
+    "width": 1942,
+    "height": 809,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e635e0df-1668-4ad2-8f28-f66d87fe5f39/hero4-480.webp",
+        "bytes": 2832
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/6661d27d-af5d-4e85-aee7-369bfb38276e/hero4-1280.webp",
+        "bytes": 11796
+      }
+    ],
+    "originalBytes": 19812
+  },
+  "/iv-cannula-branula.png": {
+    "width": 400,
+    "height": 300,
+    "variants": [
+      {
+        "width": 400,
+        "url": "/__l5e/assets-v1/e82e4c5c-eccf-4ec2-acd1-9a405de7ee2e/iv-cannula-branula-400.webp",
+        "bytes": 2584
+      }
+    ],
+    "originalBytes": 26840
+  },
+  "/medical-grade-storage-facility.webp": {
+    "width": 1408,
+    "height": 768,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/5a1f45e4-1e66-4f12-90c7-2bcd2b2efbf6/medical-grade-storage-facility-480.webp",
+        "bytes": 33644
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/7e8a5408-263c-4e9f-b8e7-35daeda2087c/medical-grade-storage-facility-1280.webp",
+        "bytes": 156026
+      }
+    ],
+    "originalBytes": 157248
+  },
+  "/pH_Meter_Pen_Type.png": {
+    "width": 898,
+    "height": 873,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/5fb9bd6d-8cde-41d4-be35-99de91996673/pH_Meter_Pen_Type-480.webp",
+        "bytes": 7196
+      },
+      {
+        "width": 898,
+        "url": "/__l5e/assets-v1/39200355-d4bb-46ba-9d0e-87921653acf0/pH_Meter_Pen_Type-898.webp",
+        "bytes": 15536
+      }
+    ],
+    "originalBytes": 246353
+  },
+  "/svc-custom-sourcing.webp": {
+    "width": 612,
+    "height": 377,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/ee8129a1-6102-48d5-a921-5e84fe1f19a1/svc-custom-sourcing-480.webp",
+        "bytes": 21668
+      },
+      {
+        "width": 612,
+        "url": "/__l5e/assets-v1/babb769f-053d-4ef5-aedb-40cc1947bf67/svc-custom-sourcing-612.webp",
+        "bytes": 29076
+      }
+    ],
+    "originalBytes": 30006
+  },
+  "/svc-delivery.webp": {
+    "width": 1400,
+    "height": 747,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/d345943e-f3a8-4edc-94d9-c5188154ac6f/svc-delivery-480.webp",
+        "bytes": 20558
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/db934bad-01b3-44d0-a8bd-55a97d900e82/svc-delivery-1280.webp",
+        "bytes": 59578
+      }
+    ],
+    "originalBytes": 65456
+  },
+  "/svc-humanitarian.webp": {
+    "width": 1200,
+    "height": 628,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/492d333f-5d05-459c-8507-fb67a4ad438c/svc-humanitarian-480.webp",
+        "bytes": 11598
+      },
+      {
+        "width": 1200,
+        "url": "/__l5e/assets-v1/41b13533-61a0-47c7-85d8-8b86a3c506ed/svc-humanitarian-1200.webp",
+        "bytes": 28516
+      }
+    ],
+    "originalBytes": 26338
+  },
+  "/svc-installation.webp": {
+    "width": 1400,
+    "height": 936,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e8781769-5c9a-4c6c-ab9f-0e4cc63a7208/svc-installation-480.webp",
+        "bytes": 16676
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/5939bfd3-2d24-4536-b74f-e3c8dde29c69/svc-installation-1280.webp",
+        "bytes": 47994
+      }
+    ],
+    "originalBytes": 52318
+  },
+  "/svc-maintenance.webp": {
+    "width": 1400,
+    "height": 934,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/c601c6ff-1485-4bf4-b6f3-2f5d14093d6c/svc-maintenance-480.webp",
+        "bytes": 20144
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/c5b1d535-d632-4e3a-bfcd-7f041b1373f0/svc-maintenance-1280.webp",
+        "bytes": 62776
+      }
+    ],
+    "originalBytes": 70162
+  },
+  "/svc-training.webp": {
+    "width": 1400,
+    "height": 1005,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/fcd1a4e8-88c9-4404-b7a6-d7a214d29811/svc-training-480.webp",
+        "bytes": 20010
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/8a19288a-0496-4699-bfcb-4da351d9ba3b/svc-training-1280.webp",
+        "bytes": 58240
+      }
+    ],
+    "originalBytes": 66086
+  },
+  "/wrhs.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/3ce0720d-f88a-4acc-ab11-7b2b38f106c6/wrhs-480.webp",
+        "bytes": 38290
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/3efc652e-eaa1-46d6-a1f7-bb16a655e4ab/wrhs-1280.webp",
+        "bytes": 146502
+      }
+    ],
+    "originalBytes": 2140967
+  },
+  "/NewHeros/Aquatabs box with sachets on blue tarps.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Aquatabs box with sachets on blue tarps-768.webp",
+        "bytes": 42794
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Aquatabs box with sachets on blue tarps-1672.webp",
+        "bytes": 145144
+      }
+    ],
+    "originalBytes": 1920639
+  },
+  "/NewHeros/Color-Accurate Safety Packaging Showcase.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Color-Accurate Safety Packaging Showcase-768.webp",
+        "bytes": 38802
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Color-Accurate Safety Packaging Showcase-1672.webp",
+        "bytes": 122930
+      }
+    ],
+    "originalBytes": 1865018
+  },
+  "/NewHeros/Dental clinic with sleek three-shelf trolley.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Dental clinic with sleek three-shelf trolley-768.webp",
+        "bytes": 26726
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Dental clinic with sleek three-shelf trolley-1672.webp",
+        "bytes": 77698
+      }
+    ],
+    "originalBytes": 1573771
+  },
+  "/NewHeros/Elegant ophthalmic studio equipment display.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Elegant ophthalmic studio equipment display-768.webp",
+        "bytes": 22384
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Elegant ophthalmic studio equipment display-1672.webp",
+        "bytes": 65140
+      }
+    ],
+    "originalBytes": 1550342
+  },
+  "/NewHeros/Five-piece hospital furniture showroom-2.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Five-piece hospital furniture showroom-2-768.webp",
+        "bytes": 28672
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Five-piece hospital furniture showroom-2-1672.webp",
+        "bytes": 81894
+      }
+    ],
+    "originalBytes": 1678780
+  },
+  "/NewHeros/Homecare essentials in warm ivory light-1.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Homecare essentials in warm ivory light-1-768.webp",
+        "bytes": 32936
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Homecare essentials in warm ivory light-1-1672.webp",
+        "bytes": 98276
+      }
+    ],
+    "originalBytes": 1758755
+  },
+  "/NewHeros/Patient Monitor Moved Above Blue Examination Bed.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Patient Monitor Moved Above Blue Examination Bed-768.webp",
+        "bytes": 26108
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Patient Monitor Moved Above Blue Examination Bed-1672.webp",
+        "bytes": 73538
+      }
+    ],
+    "originalBytes": 1511994
+  },
+  "/NewHeros/Protective gear hero lineup on a warm teal backdrop (1).png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/Protective gear hero lineup on a warm teal backdrop (1)-768.webp",
+        "bytes": 24248
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/Protective gear hero lineup on a warm teal backdrop (1)-1672.webp",
+        "bytes": 74224
+      }
+    ],
+    "originalBytes": 1584488
+  },
+  "/NewHeros/WESLEY dialysis machine and sterile accessories.png": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 768,
+        "url": "/NewHeros/WESLEY dialysis machine and sterile accessories-768.webp",
+        "bytes": 18392
+      },
+      {
+        "width": 1672,
+        "url": "/NewHeros/WESLEY dialysis machine and sterile accessories-1672.webp",
+        "bytes": 56260
+      }
+    ],
+    "originalBytes": 1426192
+  },
+  "/featured/ast-1000-poster.jpg": {
+    "width": 720,
+    "height": 1280,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/e968329c-5051-486f-a9de-9070105b83e3/ast-1000-poster-480.webp",
+        "bytes": 18650
+      },
+      {
+        "width": 720,
+        "url": "/__l5e/assets-v1/b9720a72-cb0b-40f5-9625-d3e89c79e3c8/ast-1000-poster-720.webp",
+        "bytes": 28126
+      }
+    ],
+    "originalBytes": 44897
+  },
+  "/featured/hiv-kit.jpg": {
+    "width": 571,
+    "height": 477,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/b3f0f2e0-4c71-4502-8ed1-487045992b2b/hiv-kit-480.webp",
+        "bytes": 8800
+      },
+      {
+        "width": 571,
+        "url": "/__l5e/assets-v1/51644a25-7ad8-4293-a171-a16222d89ec4/hiv-kit-571.webp",
+        "bytes": 11174
+      }
+    ],
+    "originalBytes": 37835
+  },
+  "/featured/vq200-qpcr.jpg": {
+    "width": 1424,
+    "height": 573,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/__l5e/assets-v1/80b33a32-6f47-45fc-8b59-f7564a976b3c/vq200-qpcr-480.webp",
+        "bytes": 7600
+      },
+      {
+        "width": 1280,
+        "url": "/__l5e/assets-v1/01a2447b-f4b3-4442-a3aa-419cf9f9fbbd/vq200-qpcr-1280.webp",
+        "bytes": 22770
+      }
+    ],
+    "originalBytes": 83149
+  }
+}
