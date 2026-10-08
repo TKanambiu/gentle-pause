@@ -3,7 +3,8 @@ import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { whatsappLink } from "@/lib/whatsapp";
 import { PageHero } from "./about";
-import { CATEGORIES, COMPANY, allProducts, formatKES } from "@/data/catalogue";
+import { formatKES } from "@/data/catalogue";
+import { useLiveCategories } from "@/lib/live-catalogue";
 import { useEffect, useMemo, useState } from "react";
 import { Search, MessageCircle, ArrowRight } from "lucide-react";
 
@@ -28,7 +29,8 @@ function ProductsPage() {
   const { q: initialQ } = Route.useSearch();
   const [q, setQ] = useState(initialQ ?? "");
   useEffect(() => { if (initialQ !== undefined) setQ(initialQ); }, [initialQ]);
-  const products = useMemo(() => allProducts(), []);
+  const CATEGORIES = useLiveCategories();
+  const products = useMemo(() => CATEGORIES.flatMap((c) => c.subcategories.flatMap((s) => s.products.map((prod) => ({ ...prod, category: c.name, categorySlug: c.slug, categoryImage: c.image })))), [CATEGORIES]);
   const filtered = q
     ? products.filter((p) => p.name.toLowerCase().includes(q.toLowerCase()))
     : [];

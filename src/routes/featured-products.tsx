@@ -240,7 +240,7 @@ function FeaturedProductsPage() {
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <img
-              src="/hero3.webp"
+              src="/KHB HIV Diagnostic Test Kit.png"
               alt="KHB Diagnostic Kit for HIV (1+2) Antibody colloidal gold rapid test with cassettes, diluent and lancet"
               loading="lazy"
               className="order-2 h-80 w-full rounded-xl bg-white object-contain p-6 shadow-[var(--shadow-card)] lg:order-1"
