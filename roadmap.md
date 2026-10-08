@@ -1,4 +1,5 @@
 # Website updates
+- [x] Restore repository-hosted optimized photos for the live cPanel site and verify without Lovable asset access.
 - [x] Optimize sitewide photos and loading priorities; remove homepage photo letterboxing and verify image loading.
 - [x] Match the logo used in the lower section of the live About page.
 - [x] Improve the About section design.
