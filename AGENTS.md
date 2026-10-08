@@ -15,7 +15,8 @@
 - Build flattens SPA output into dist/ with index.html at the root and Apache fallback to index.html; cPanel serves static files without an application server.
 - Use the existing live site's public Supabase connection for browser-only staff sign-in; the operations editor remains on the live console, and no private data is exposed by the local sign-in screen.
 - Use full-width large content container tokens while keeping readable text blocks and forms constrained; this removes desktop gutters without stretching login forms.
-- Derive the header category navigation and overflow menu from the shared catalogue so category links remain aligned with product pages.
+- Derive every visible header category link from the shared catalogue in a compact wrapping grid rather than an overflow menu, so all categories remain accessible without an extra click.
+- Keep the detailed About and Services layouts local to their routes and use committed photos with OptimizedImage, so homepage presentation and static hosting remain unchanged.
 
 - Use the shared optimized-photo manifest and image component for responsive static WebP variants; keep unknown remote uploads unchanged so catalogue URLs remain compatible.
 - Generate supplied homepage photo variants in public/NewHeros and other optimized photo variants in public/optimized with local manifest URLs so static exports contain every variant; preload only the homepage’s first photo in its leaf route.

@@ -23,7 +23,6 @@ export function SiteHeader() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const catRef = useRef<HTMLDivElement>(null);
-  const browseRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -33,15 +32,6 @@ export function SiteHeader() {
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [open]);
-
-  useEffect(() => {
-    if (!cats || open) return;
-    const close = (e: MouseEvent) => {
-      if (browseRef.current && !browseRef.current.contains(e.target as Node)) setCats(false);
-    };
-    document.addEventListener("mousedown", close);
-    return () => document.removeEventListener("mousedown", close);
-  }, [cats, open]);
 
   useEffect(() => {
     if (!catOpen) return;
@@ -183,45 +173,21 @@ export function SiteHeader() {
       </div>
 
       <nav aria-label="Product categories" className="border-b border-border bg-brand text-brand-foreground">
-        <div className="mx-auto hidden max-w-7xl flex-wrap items-center gap-1 px-4 md:flex">
-          {CATEGORIES.slice(0, 4).map((category) => (
+        <div className="mx-auto hidden max-w-7xl grid-cols-5 items-stretch px-3 md:grid lg:px-4">
+          {CATEGORIES.map((category) => (
             <Link
               key={category.slug}
               to="/products/$slug"
               params={{ slug: category.slug }}
-              className="border-r border-brand-foreground/25 px-3 py-3 text-xs font-semibold uppercase transition hover:bg-accent hover:text-accent-foreground lg:text-sm"
+              className="flex min-h-9 min-w-0 items-center justify-center border-b border-r border-brand-foreground/20 px-2 py-2 text-center text-[10px] font-semibold leading-snug transition hover:bg-accent hover:text-accent-foreground lg:text-[11px] xl:text-xs"
               activeProps={{ className: "bg-accent text-accent-foreground" }}
             >
               {category.name}
             </Link>
           ))}
-          <div
-            ref={browseRef}
-            onKeyDown={(e) => { if (e.key === "Escape") setCats(false); }}
-            className="relative"
-          >
-            <Button variant="ghost" onClick={() => setCats((value) => !value)} aria-expanded={cats} aria-controls="navigation-categories" className="h-auto rounded-none px-3 py-3 text-xs font-semibold uppercase text-brand-foreground hover:bg-accent hover:text-accent-foreground lg:text-sm">
-              Other Categories <ChevronDown className="h-4 w-4" />
-            </Button>
-            {cats && (
-              <div id="navigation-categories" className="absolute right-0 top-full z-50 max-h-[65vh] w-72 overflow-auto bg-background text-foreground shadow-xl">
-                {CATEGORIES.slice(4).map((category) => (
-                  <Link
-                    key={category.slug}
-                    to="/products/$slug"
-                    params={{ slug: category.slug }}
-                    onClick={() => setCats(false)}
-                    className="block border-b border-border px-4 py-2.5 text-sm hover:bg-muted hover:text-brand"
-                  >
-                    {category.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
           <Link
             to="/featured-products"
-            className="my-1 ml-auto flex items-center gap-2 rounded-full bg-featured px-4 py-2 text-xs font-bold text-featured-foreground transition hover:brightness-105 lg:text-sm"
+            className="flex min-h-9 items-center justify-center bg-featured px-2 py-2 text-center text-[10px] font-bold text-featured-foreground transition hover:brightness-105 lg:text-[11px] xl:text-xs"
             activeProps={{ className: "ring-2 ring-featured-foreground/70" }}
           >
             Featured Products
