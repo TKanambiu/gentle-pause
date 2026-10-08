@@ -2,85 +2,67 @@ import { OptimizedImage } from "@/components/optimized-image";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
-const ABOUT_IMAGE = "/medical-grade-storage-facility.webp";
+import { CompanyPageCover } from "@/components/company-page-cover";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, HeartPulse, Truck, Globe, ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { PARTNER_LOGOS } from "@/data/partner-logos";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us | Zentramed Health Nairobi" },
-      { name: "description", content: "Learn about Zentramed Health — a trusted African supplier of medical equipment, laboratory diagnostics and humanitarian healthcare solutions." },
-      { property: "og:title", content: "About Zentramed Health" },
-      { property: "og:description", content: "Trusted supplier of medical supplies and equipment across Africa." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title: "About Us | Zentramed Health Nairobi" },
+    { name: "description", content: "Meet Zentramed Health, Nairobi's medical equipment and healthcare supply partner for hospitals, clinics, institutions and humanitarian programmes across Africa." },
+    { property: "og:title", content: "About Zentramed Health | Our People, Purpose & Standards" },
+    { property: "og:description", content: "Discover our clinical focus, medical supply expertise and commitment to dependable healthcare across Africa." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   component: AboutPage,
 });
 
+const STANDARDS = [
+  { title: "Product integrity", body: "We source medical products from trusted global manufacturers, keeping quality and suitability at the centre of every supply decision." },
+  { title: "Clinical understanding", body: "From a clinic's everyday consumables to a hospital's specialist equipment, our approach starts with the needs of the people delivering care." },
+  { title: "Dependable support", body: "Supply is only the beginning. Installation, operator training and maintenance support help facilities make the most of their equipment." },
+  { title: "Regional perspective", body: "Based in Nairobi, we support healthcare facilities and humanitarian partners with coordinated delivery in Kenya and the wider East African region." },
+];
+
 function AboutPage() {
-  const standards = [
-    { icon: ShieldCheck, title: "Quality assured", body: "Certified, approved products sourced from trusted global manufacturers." },
-    { icon: HeartPulse, title: "Clinically focused", body: "Solutions selected around the practical needs of care teams and facilities." },
-    { icon: Truck, title: "Dependable delivery", body: "Secure, coordinated fulfilment for institutions and programmes across the region." },
-    { icon: Globe, title: "Regional reach", body: "Local expertise in Nairobi with the capability to support partners across Africa." },
-  ];
-  return (
-    <div>
-      <SiteHeader />
-      <section className="relative overflow-hidden bg-topbar text-topbar-foreground">
-        <div className="absolute inset-y-0 right-0 hidden w-1/3 border-l border-brand/30 bg-brand/10 lg:block" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-12 lg:py-20">
-          <div className="lg:col-span-8">
-            <p className="flex items-center gap-3 font-mono text-[10px] font-bold uppercase text-brand"><span className="h-px w-8 bg-brand" /> About Zentramed Health</p>
-            <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl">Better healthcare begins with dependable supply.</h1>
-            <p className="mt-5 max-w-2xl border-l-2 border-brand pl-5 text-sm leading-7 text-topbar-foreground/70 sm:text-base">We connect hospitals, clinics, NGOs and public institutions with the medical products, equipment and support they need to deliver care with confidence.</p>
-          </div>
-          <div className="border-y border-brand/40 py-6 lg:col-span-3 lg:col-start-10">
-            <p className="font-mono text-[10px] uppercase">Our purpose</p>
-            <p className="mt-3 font-display text-lg font-semibold leading-snug">Advancing healthcare and humanitarian solutions across Africa.</p>
-          </div>
+  return <div className="about-content">
+    <SiteHeader />
+    <main>
+      <CompanyPageCover image="/medical-grade-storage-facility.webp" imageAlt="Organised medical supplies in a healthcare storage facility" label="About us / Nairobi, Kenya" title="Zentramed Health" description="Better healthcare begins with dependable supply. Medical equipment, clinical essentials and humanitarian solutions for the people delivering care." />
+      <div className="grid grid-cols-2 border-b border-border bg-secondary px-5 md:grid-cols-4 md:px-10 lg:px-12">
+        {[['500+', 'Products stocked'], ['9', 'Clinical categories'], ['Nairobi', 'Our home base'], ['Africa', 'Our healthcare focus']].map(([value, label]) => <div key={label} className="border-r border-border py-6 pl-4 first:pl-0 last:border-r-0 md:py-7"><p className="font-editorial text-2xl font-semibold text-brand md:text-3xl">{value}</p><p className="mt-1 text-xs text-muted-foreground">{label}</p></div>)}
+      </div>
+      <section className="grid items-center gap-10 px-5 py-14 md:px-10 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-20">
+        <div>
+          <p className="text-xs font-semibold uppercase text-brand">01 / Who we are</p>
+          <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight md:text-4xl">A committed partner to every care environment.</h2>
+          <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">Zentramed Health brings together medical supplies, equipment and practical support for hospitals, clinics, NGOs and public institutions. We connect the breadth of a medical catalogue with an understanding of how healthcare facilities work.</p>
+          <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">Our range spans protective wear, wound care, laboratory diagnostics, monitoring, respiratory care, maternity, hospital furniture, theatre equipment and imaging. Whether equipping a ward or replenishing essential supplies, we help care teams find solutions suited to their needs.</p>
+          <Button asChild variant="link" className="mt-5 px-0"><Link to="/products">Explore our catalogue <ArrowUpRight /></Link></Button>
         </div>
+        <figure className="min-w-0">
+          <OptimizedImage src="/svc-training.webp" alt="Medical equipment training for healthcare professionals" sizes="(min-width: 1024px) 50vw, 100vw" className="aspect-[4/3] w-full object-cover" />
+          <figcaption className="flex items-start justify-between gap-4 border-b border-border py-4 text-xs text-muted-foreground"><span>Practical expertise. A clinical focus.</span><span className="text-brand">Zentramed Health</span></figcaption>
+        </figure>
       </section>
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16">
-          <div className="relative border border-brand/30 p-2 sm:p-3">
-            <OptimizedImage src={ABOUT_IMAGE} sizes="(min-width: 1024px) 50vw, 100vw" alt="Healthcare professional preparing clinical instruments" className="aspect-[4/3] w-full object-cover shadow-xl" loading="lazy" />
-            <div className="absolute bottom-0 right-0 max-w-52 bg-brand px-6 py-5 text-brand-foreground shadow-xl">
-              <p className="font-display text-3xl font-bold">500+</p><p className="mt-1 text-xs font-semibold uppercase">Products stocked</p>
-            </div>
-          </div>
-          <div>
-            <p className="flex items-center gap-3 font-mono text-[10px] font-bold uppercase text-brand"><span className="h-px w-8 bg-brand" /> Who we are / What we stand for</p>
-            <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">A committed partner to every care environment.</h2>
-            <p className="mt-5 text-base leading-7 text-muted-foreground">Zentramed Health is a trusted supplier of high-quality medical supplies, equipment and solutions. From wound care and diagnostics to oxygen therapy and hospital furniture, we deliver the breadth healthcare facilities need to operate effectively.</p>
-            <div className="mt-6 border-y border-border py-5">
-              <p className="font-mono text-[10px] font-bold uppercase text-brand">Our mission</p>
-              <p className="mt-3 font-display text-xl font-semibold leading-relaxed text-foreground">To improve health outcomes through quality, innovation and exceptional service.</p>
-            </div>
-            <Button asChild className="mt-6" size="lg"><Link to="/contact">Speak with our team <ArrowRight /></Link></Button>
-          </div>
-        </div>
+      <section className="grid border-y border-border bg-secondary md:grid-cols-2">
+        <div className="px-5 py-12 md:border-r md:border-border md:px-10 lg:px-12"><p className="text-xs font-semibold uppercase text-brand">Our mission</p><h2 className="mt-5 max-w-xl text-2xl font-semibold leading-relaxed md:text-3xl">To improve health outcomes through quality, innovation and exceptional service.</h2></div>
+        <div className="px-5 pb-12 md:px-10 md:py-12 lg:px-12"><p className="text-xs font-semibold uppercase text-brand">Our purpose</p><h2 className="mt-5 max-w-xl text-2xl font-semibold leading-relaxed md:text-3xl">Advancing healthcare and humanitarian solutions across Africa.</h2><p className="mt-4 max-w-xl text-sm leading-7 text-muted-foreground">We support the institutions and programmes that make healthcare possible, with products and services that respond to real clinical and operational needs.</p></div>
       </section>
-      <section className="border-y border-border bg-muted/40 py-14">
-        <div className="mx-auto max-w-7xl px-5">
-          <div className="grid gap-5 border-b border-border pb-7 md:grid-cols-2 md:items-end">
-            <div><p className="font-mono text-[10px] font-bold uppercase text-brand">The Zentramed standard</p><h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">Built around trust.</h2></div>
-            <p className="text-base leading-7 text-muted-foreground">Every engagement is guided by product integrity, responsive service and a clear understanding of institutional healthcare needs.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4">
-            {standards.map(({ icon: Icon, title, body }, index) => <article key={title} className="border-b border-border py-6 md:px-7 lg:border-b-0 lg:border-r lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0">
-              <div className="flex items-center justify-between"><Icon className="h-7 w-7 text-brand" strokeWidth={1.6} /><span className="font-mono text-[10px] text-muted-foreground">0{index + 1}</span></div>
-              <h3 className="mt-5 font-display text-lg font-bold text-foreground">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{body}</p>
-            </article>)}
-          </div>
-        </div>
+      <section className="px-5 py-14 md:px-10 lg:px-12 lg:py-20">
+        <div className="grid gap-6 md:grid-cols-2 md:items-end"><div><p className="text-xs font-semibold uppercase text-brand">02 / The Zentramed standard</p><h2 className="mt-4 text-3xl font-semibold md:text-4xl">Built around trust.</h2></div><p className="max-w-xl text-base leading-7 text-muted-foreground">Product integrity, responsive service and a clear understanding of institutional healthcare needs guide every engagement.</p></div>
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4">{STANDARDS.map((item, i) => <article key={item.title} className="border-t border-border py-7 md:pr-7 lg:border-r lg:px-7 lg:first:pl-0 lg:last:border-r-0"><span className="font-editorial text-4xl font-medium text-brand/40">0{i + 1}</span><h3 className="mt-5 text-xl font-semibold">{item.title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p></article>)}</div>
       </section>
-      <SiteFooter /><WhatsAppFloat />
-    </div>
-  );
+      <section className="grid bg-topbar text-topbar-foreground lg:grid-cols-2">
+        <OptimizedImage src="/svc-humanitarian.webp" alt="Healthcare supplies prepared for humanitarian programmes" sizes="(min-width: 1024px) 50vw, 100vw" className="aspect-[3/2] h-full max-h-[480px] w-full object-cover" />
+        <div className="self-center px-5 py-12 md:px-10 lg:px-12"><p className="text-xs font-semibold uppercase text-topbar-foreground/70">03 / Who we support</p><h2 className="mt-5 text-3xl font-semibold leading-tight md:text-4xl">From everyday care to humanitarian response.</h2><p className="mt-5 max-w-xl text-base leading-8 text-topbar-foreground/80">We work with hospitals and clinics, diagnostic laboratories, public institutions and humanitarian organisations. Each has different requirements; all need dependable access to medical essentials.</p><div className="mt-6 border-y border-topbar-foreground/20 py-4 text-sm leading-7">Hospitals & clinics · Laboratories · NGOs & humanitarian programmes · Public institutions</div><Button asChild variant="secondary" className="mt-7"><Link to="/services">Discover our services <ArrowUpRight /></Link></Button></div>
+      </section>
+      <section className="px-5 pt-14 md:px-10 lg:px-12"><p className="text-xs font-semibold uppercase text-brand">Our supply network</p><h2 className="mt-4 text-3xl font-semibold">Connected to trusted manufacturers.</h2><p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">Our catalogue brings together established medical and healthcare brands, giving facilities a broad choice of products through one supply partner.</p><div className="mt-8 grid grid-cols-3 items-center gap-6 border-y border-border py-7 sm:grid-cols-4 lg:grid-cols-8">{PARTNER_LOGOS.slice(0, 8).map((partner) => <img key={partner.name} src={partner.image} alt={partner.name} loading="lazy" className="mx-auto h-14 w-full max-w-28 object-contain" />)}</div></section>
+    </main>
+    <SiteFooter /><WhatsAppFloat />
+  </div>;
 }
 
 export function PageHero({ title, subtitle }: { title: string; subtitle?: string }) {
