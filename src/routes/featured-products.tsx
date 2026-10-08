@@ -1,3 +1,4 @@
+import { OptimizedImage } from "@/components/optimized-image";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/featured-products")({
 function SafeImg({ src, alt, className }: { src: string; alt: string; className?: string }) {
   const [ok, setOk] = useState(true);
   if (!ok) return null;
-  return <img src={src} alt={alt} loading="lazy" onError={() => setOk(false)} className={className} />;
+  return <OptimizedImage src={src} alt={alt} loading="lazy" onError={() => setOk(false)} className={className} />;
 }
 
 function Badge({ children }: { children: React.ReactNode }) {
@@ -239,7 +240,7 @@ function FeaturedProductsPage() {
       <section id="hiv" className="scroll-mt-24 bg-muted/40">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="grid items-center gap-10 lg:grid-cols-2">
-            <img
+            <OptimizedImage
               src="/KHB HIV Diagnostic Test Kit.png"
               alt="KHB Diagnostic Kit for HIV (1+2) Antibody colloidal gold rapid test with cassettes, diluent and lancet"
               loading="lazy"

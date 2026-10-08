@@ -1,3 +1,4 @@
+import { OptimizedImage } from "@/components/optimized-image";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
@@ -57,8 +58,10 @@ function CategoryPage() {
 
       {/* Category hero — named after the category itself */}
       <section className="relative overflow-hidden bg-brand text-brand-foreground">
-        <img
+        <OptimizedImage
           src={category.image}
+          loading="eager"
+          fetchPriority="high"
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
@@ -137,8 +140,9 @@ function CategoryPage() {
                         className="group flex flex-col overflow-hidden rounded-xl border border-border bg-background transition hover:-translate-y-1 hover:border-brand hover:shadow-[var(--shadow-card)]"
                       >
                         <div className={`relative aspect-[4/3] overflow-hidden ${prod.image ? "bg-white p-4" : "bg-muted"}`}>
-                          <img
+                          <OptimizedImage
                             src={prod.image ?? category.image}
+                            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
                             alt={prod.name}
                             loading="lazy"
                             width={800}

@@ -1,3 +1,4 @@
+import { OptimizedImage } from "@/components/optimized-image";
 import { Link } from "@tanstack/react-router";
 import type { Category } from "@/data/catalogue";
 
@@ -27,8 +28,9 @@ export function CategoryMarquee({ categories }: Props) {
             className="group/card relative block w-[280px] shrink-0 overflow-hidden rounded-lg bg-background shadow-md ring-1 ring-border transition hover:-translate-y-1 hover:shadow-xl md:w-[320px]"
           >
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img
+              <OptimizedImage
                 src={c.image}
+                sizes="(min-width: 768px) 320px, 280px"
                 alt={c.name}
                 loading="lazy"
                 className="h-full w-full object-cover transition duration-500 group-hover/card:scale-105"

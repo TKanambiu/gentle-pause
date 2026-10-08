@@ -1,3 +1,4 @@
+import { OptimizedImage } from "@/components/optimized-image";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -44,7 +45,7 @@ function AdminPage() {
   return (
     <main className="admin-theme min-h-screen bg-admin-background px-4 py-10 text-admin-foreground">
       <div className="mx-auto flex flex-col items-center text-center">
-        <img src="/logo-wide.png" alt="Zentramed Health" className="h-12 w-auto object-contain brightness-0 invert" />
+        <OptimizedImage src="/logo-wide.png" alt="Zentramed Health" className="h-12 w-auto object-contain brightness-0 invert" />
         <p className="mt-3 font-mono text-[10px] uppercase text-admin-muted">Operations Console</p>
       </div>
       <div className="mt-8">
@@ -146,7 +147,7 @@ function PhotoPicker({ url, onChange }: { url: string | null; onChange: (u: stri
   const [busy, setBusy] = useState(false);
   return (
     <label className="relative grid h-16 w-16 shrink-0 cursor-pointer place-items-center overflow-hidden rounded border border-admin-border bg-white" title="Change photo">
-      {url ? <img src={url} alt="" className="h-full w-full object-contain" /> : <Upload className="h-5 w-5 text-admin-muted" />}
+      {url ? <OptimizedImage src={url} alt="" className="h-full w-full object-contain" /> : <Upload className="h-5 w-5 text-admin-muted" />}
       {busy && <span className="absolute inset-0 grid place-items-center bg-admin-background/70"><LoaderCircle className="h-5 w-5 animate-spin" /></span>}
       <input type="file" accept="image/*" className="hidden" onChange={async (e) => { const f = e.target.files?.[0]; if (!f) return; setBusy(true); try { onChange(await uploadPhoto(f)); } catch (err: any) { alert(err.message); } setBusy(false); }} />
     </label>

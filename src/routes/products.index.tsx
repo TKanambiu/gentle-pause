@@ -1,3 +1,4 @@
+import { OptimizedImage } from "@/components/optimized-image";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
@@ -64,8 +65,9 @@ function ProductsPage() {
                   params={{ slug: p.categorySlug }}
                   className="flex items-center gap-3 rounded-md bg-background p-3 text-sm transition hover:shadow"
                 >
-                  <img
+                  <OptimizedImage
                     src={p.image ?? p.categoryImage}
+                    sizes="48px"
                     alt={p.name}
                     loading="lazy"
                     className={`h-12 w-12 shrink-0 rounded ${p.image ? "bg-white object-contain p-1" : "object-cover"}`}

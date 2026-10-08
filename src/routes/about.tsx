@@ -1,3 +1,4 @@
+import { OptimizedImage } from "@/components/optimized-image";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
@@ -46,7 +47,7 @@ function AboutPage() {
       <section className="py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16">
           <div className="relative border border-brand/30 p-2 sm:p-3">
-            <img src={ABOUT_IMAGE} alt="Healthcare professional preparing clinical instruments" className="aspect-[4/3] w-full object-cover shadow-xl" loading="lazy" />
+            <OptimizedImage src={ABOUT_IMAGE} sizes="(min-width: 1024px) 50vw, 100vw" alt="Healthcare professional preparing clinical instruments" className="aspect-[4/3] w-full object-cover shadow-xl" loading="lazy" />
             <div className="absolute bottom-0 right-0 max-w-52 bg-brand px-6 py-5 text-brand-foreground shadow-xl">
               <p className="font-display text-3xl font-bold">500+</p><p className="mt-1 text-xs font-semibold uppercase">Products stocked</p>
             </div>
