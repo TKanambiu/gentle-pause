@@ -1,17 +1,14 @@
-"""Regenerate static photo variants (requires Python Pillow and lovable-assets)."""
+"""Regenerate repository-hosted static photo variants (requires Python Pillow)."""
 import concurrent.futures
 import hashlib
 import json
-import subprocess
 from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / 'public'
-POINTERS = ROOT / 'src/assets/optimized'
-TEMP = Path('/tmp/zentramed-optimized')
-POINTERS.mkdir(parents=True, exist_ok=True)
-TEMP.mkdir(parents=True, exist_ok=True)
+OPTIMIZED = PUBLIC / 'optimized'
+OPTIMIZED.mkdir(parents=True, exist_ok=True)
 
 def optimize(path):
     relative = path.relative_to(PUBLIC)
@@ -36,20 +33,16 @@ def optimize(path):
             size = target.stat().st_size
         else:
             key = hashlib.sha256(str(relative).encode()).hexdigest()[:12]
-            target = TEMP / f'{key}-{width}.webp'
-            pointer = POINTERS / f'{key}-{width}.webp.asset.json'
-            if not pointer.exists():
-                resized.save(target, 'WEBP', quality=82, method=6)
-                result = subprocess.run(['lovable-assets', 'create', '--file', str(target), '--filename', name], check=True, capture_output=True, text=True)
-                pointer.write_text(result.stdout)
-            asset = json.loads(pointer.read_text())
-            url, size = asset['url'], asset['size']
+            target = OPTIMIZED / f'{key}-{width}.webp'
+            resized.save(target, 'WEBP', quality=82, method=6)
+            url = '/' + str(target.relative_to(PUBLIC))
+            size = target.stat().st_size
         variants.append({'width': width, 'url': url, 'bytes': size})
     return '/' + str(relative), {'width': image.width, 'height': image.height, 'variants': variants, 'originalBytes': path.stat().st_size}
 
 if __name__ == '__main__':
     # Only original files: generated WebP variants and logo/icon assets are excluded.
-    paths = [p for p in PUBLIC.rglob('*') if p.suffix.lower() in ('.png', '.jpg', '.jpeg', '.webp') and not (p.parent.name == 'NewHeros' and p.suffix == '.webp')]
+    paths = sorted(p for p in PUBLIC.rglob('*') if p.suffix.lower() in ('.png', '.jpg', '.jpeg', '.webp') and 'optimized' not in p.relative_to(PUBLIC).parts and not (p.parent.name == 'NewHeros' and p.suffix == '.webp'))
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         manifest = dict(item for item in pool.map(optimize, paths) if item)
     (ROOT / 'src/data/optimized-images.json').write_text(json.dumps(manifest, indent=2) + '\n')
