@@ -109,8 +109,7 @@ function Manager({ email }: { email: string }) {
 
   async function importCatalogue() {
     setBusy(true); setMsg("");
-    const base = window.location.origin;
-    const list = allProducts().map((p, i) => ({ category_slug: p.categorySlug, subcategory: p.subcategory, name: p.name, price: p.price, reseller: p.reseller ?? null, image_url: p.image ? base + encodeURI(p.image) : null, sort_order: i }));
+    const list = allProducts().map((p, i) => ({ category_slug: p.categorySlug, subcategory: p.subcategory, name: p.name, price: p.price, reseller: p.reseller ?? null, image_url: p.image ?? null, sort_order: i }));
     const { error } = await db.from("products").insert(list);
     setMsg(error ? error.message : `Imported ${list.length} products.`); setBusy(false); refresh();
   }
