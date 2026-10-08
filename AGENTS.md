@@ -17,6 +17,7 @@
 - Use full-width large content container tokens while keeping readable text blocks and forms constrained; this removes desktop gutters without stretching login forms.
 - Derive every visible header category link from the shared catalogue in a compact wrapping grid rather than an overflow menu, so all categories remain accessible without an extra click.
 - Keep the detailed About and Services layouts local to their routes and use committed photos with OptimizedImage, so homepage presentation and static hosting remain unchanged.
+- Share the photographic company-page cover between About and Services only, so their visual treatment stays consistent without changing the homepage or existing catalogue cover.
 
 - Use the shared optimized-photo manifest and image component for responsive static WebP variants; keep unknown remote uploads unchanged so catalogue URLs remain compatible.
 - Generate supplied homepage photo variants in public/NewHeros and other optimized photo variants in public/optimized with local manifest URLs so static exports contain every variant; preload only the homepage’s first photo in its leaf route.
