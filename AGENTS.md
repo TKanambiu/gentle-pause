@@ -12,7 +12,7 @@
 - Keep homepage slide content in a browser-safe data module shared with image preloading so photography and preload references stay aligned.
 - Keep supplied homepage hero photography in `public/NewHeros` and reference those committed files directly so static deployments remain self-contained.
 - Reference partner logos directly from committed `public/icons` files so previews and static deployments do not depend on CDN availability; use static asset pointers for other replacement images.
-- Keep SPA output in dist/client with Apache fallback to _shell.html; cPanel serves static files without an application server.
+- Build flattens SPA output into dist/ with index.html at the root and Apache fallback to index.html; cPanel serves static files without an application server.
 - Use the existing live site's public Supabase connection for browser-only staff sign-in; the operations editor remains on the live console, and no private data is exposed by the local sign-in screen.
 - Use full-width large content container tokens while keeping readable text blocks and forms constrained; this removes desktop gutters without stretching login forms.
 - Derive the header category navigation and overflow menu from the shared catalogue so category links remain aligned with product pages.

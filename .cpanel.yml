@@ -5,4 +5,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/$USER/public_html/
     - /bin/mkdir -p "$DEPLOYPATH"
-    - /bin/cp -R dist/client/. "$DEPLOYPATH"
+    - /bin/cp -R dist/. "$DEPLOYPATH"
