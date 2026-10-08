@@ -1,4 +1,5 @@
 # Website updates
+- [ ] Optimize sitewide photos and loading priorities; remove homepage photo letterboxing and verify image loading.
 - [x] Match the logo used in the lower section of the live About page.
 - [x] Improve the About section design.
 - [x] Improve the Android header and verify its appearance and navigation.
