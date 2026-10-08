@@ -74,7 +74,7 @@ function HomePage() {
                   </div>
                   <h1 className="font-display text-3xl font-bold leading-tight drop-shadow-lg md:text-5xl">
                     {s.title}{" "}
-                    <span className="text-accent">{s.accent}</span>
+                    <span className="text-footer-accent md:text-accent">{s.accent}</span>
                   </h1>
                   <p className="mt-3 max-w-lg text-sm text-brand-foreground drop-shadow md:text-base">{s.body}</p>
                   <div className="mt-6 flex flex-wrap gap-3">
