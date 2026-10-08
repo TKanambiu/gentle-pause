@@ -1,5 +1,5 @@
 # TanStack Start SPA routing for Apache/cPanel
-DirectoryIndex _shell.html index.html
+DirectoryIndex index.html index.html
 RewriteEngine On
 
 # Never rewrite real files or directories (JS, CSS, images, fonts, etc.)
@@ -8,5 +8,5 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # TanStack Start SPA shell
-RewriteRule ^$ _shell.html [L]
-RewriteRule ^ _shell.html [L]
+RewriteRule ^$ index.html [L]
+RewriteRule ^ index.html [L]
