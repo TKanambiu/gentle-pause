@@ -10,142 +10,11 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.5"
+    PostgrestVersion: "14.18"
   }
   public: {
     Tables: {
-      agent_profiles: {
-        Row: {
-          created_at: string
-          description: string
-          id: string
-          photo_path: string | null
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          description?: string
-          id: string
-          photo_path?: string | null
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          description?: string
-          id?: string
-          photo_path?: string | null
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      profiles: {
-        Row: {
-          avatar_url: string | null
-          created_at: string
-          display_name: string | null
-          id: string
-          updated_at: string
-        }
-        Insert: {
-          avatar_url?: string | null
-          created_at?: string
-          display_name?: string | null
-          id: string
-          updated_at?: string
-        }
-        Update: {
-          avatar_url?: string | null
-          created_at?: string
-          display_name?: string | null
-          id?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      properties: {
-        Row: {
-          area: string
-          bathrooms: string
-          bedrooms: string
-          created_at: string
-          created_by: string | null
-          description: string
-          featured: boolean
-          features: string[]
-          id: string
-          image_fallback: string | null
-          image_url: string | null
-          location: string
-          price: string
-          property_type: string
-          published: boolean
-          status: string
-          title: string
-          updated_at: string
-        }
-        Insert: {
-          area?: string
-          bathrooms?: string
-          bedrooms?: string
-          created_at?: string
-          created_by?: string | null
-          description?: string
-          featured?: boolean
-          features?: string[]
-          id?: string
-          image_fallback?: string | null
-          image_url?: string | null
-          location: string
-          price: string
-          property_type: string
-          published?: boolean
-          status?: string
-          title: string
-          updated_at?: string
-        }
-        Update: {
-          area?: string
-          bathrooms?: string
-          bedrooms?: string
-          created_at?: string
-          created_by?: string | null
-          description?: string
-          featured?: boolean
-          features?: string[]
-          id?: string
-          image_fallback?: string | null
-          image_url?: string | null
-          location?: string
-          price?: string
-          property_type?: string
-          published?: boolean
-          status?: string
-          title?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      user_roles: {
-        Row: {
-          created_at: string
-          id: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          role?: Database["public"]["Enums"]["app_role"]
-          user_id?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
@@ -154,7 +23,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      app_role: "admin"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -281,8 +150,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["admin"],
-    },
+    Enums: {},
   },
 } as const
